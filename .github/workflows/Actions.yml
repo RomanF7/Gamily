@@ -13,6 +13,7 @@ jobs:
           - ./
         unityVersion:
           - 2020.3.12f1
+          # adding allowDirtyBuild here fixed it for me!
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
@@ -20,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          allowDirtyBuild: true
           fetch-depth: 0
           lfs: true
       - uses: actions/cache@v2
@@ -35,6 +37,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          allowDirtyBuild: true
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -47,6 +50,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          allowDirtyBuild: true
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
