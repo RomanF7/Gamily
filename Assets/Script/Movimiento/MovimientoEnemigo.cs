@@ -5,24 +5,23 @@ using UnityEngine;
 public class MovimientoEnemigo : MonoBehaviour
 {
     //Variables privadas
-    private int posicion;
+    private int direccion;
     private float cronometro;
 
     //Variables publicas
     public MovimientoPersonaje jugador;
     public float velocidad, duracion;
-    public MenuPrincipal menu;
 
     //Start
-    void Start()
+    public void Start()
     {
         //Seteo de variables a valores por defecto
-        posicion = 0;
+        direccion = 0;
         cronometro = 0;
     }
 
     // Update
-    void Update()
+    public void Update()
     {
         //Comprobar que se haya parado el tiempo
         if (jugador.GetPararTiempo() == true)
@@ -49,13 +48,13 @@ public class MovimientoEnemigo : MonoBehaviour
             else
             {
                 //Luego de tracurir el tiempo, se selecciona la dirección opuesta para moverse
-                if (posicion == 1)
+                if (direccion == 1)
                 {
-                    posicion = 0;
+                    direccion = 0;
                 }
                 else
                 {
-                    posicion = 1;
+                    direccion = 1;
                 }
                 cronometro = Time.unscaledTime + duracion;
             }
@@ -63,14 +62,14 @@ public class MovimientoEnemigo : MonoBehaviour
     }
 
     //Movimiento dependiento de la dirección
-    void IrALaOtraDireccion()
+    public void IrALaOtraDireccion()
     {
 
-        if (posicion == 1)
+        if (direccion == 1)
         {
             transform.position = new Vector3(transform.position.x + 1 * velocidad * Time.deltaTime, transform.position.y, transform.position.z);
         }
-        else if (posicion == 0)
+        else if (direccion == 0)
         {
             transform.position = new Vector3(transform.position.x - 1 * velocidad * Time.deltaTime, transform.position.y, transform.position.z);
         }

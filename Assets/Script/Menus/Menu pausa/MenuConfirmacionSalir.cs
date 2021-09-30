@@ -11,7 +11,7 @@ public class MenuConfirmacionSalir : MonoBehaviour
 
     //Variables privadas
     private Canvas canvasMenuConfirmacionSalir;
-    void Start()
+    private void Start()
     {
         //Añadir Listenners
         btn_continuar.onClick.AddListener(BTN_ContinuarClick);
@@ -22,12 +22,12 @@ public class MenuConfirmacionSalir : MonoBehaviour
     }
 
     //OnCLick
-    void BTN_ContinuarClick()
+    public void BTN_ContinuarClick()
     {
         canvasMenuConfirmacionSalir.enabled = false;
     }
 
-    void BTN_SalirClick()
+    public void BTN_SalirClick()
     {
         SceneManager.LoadScene("MenuPrincipal");
     }

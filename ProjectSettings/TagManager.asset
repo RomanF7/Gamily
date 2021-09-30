@@ -8,6 +8,8 @@ TagManager:
   - Pincho
   - Rampa
   - Ingles
+  - Ciudad
+  - Pasto
   layers:
   - Default
   - TransparentFX

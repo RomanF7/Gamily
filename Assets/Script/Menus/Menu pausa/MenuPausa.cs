@@ -13,7 +13,7 @@ public class MenuPausa : MonoBehaviour
     private Canvas canvasPausa;
     private bool enPausa;
 
-    void Start()
+    private void Start()
     {
         //Añadir Listeners
         btn_continuar.onClick.AddListener(BTN_ContinuarClick);
@@ -36,13 +36,13 @@ public class MenuPausa : MonoBehaviour
     }
 
     //OnClick
-    void BTN_ContinuarClick()
+    public void BTN_ContinuarClick()
     {
         canvasPausa.enabled = false;
         enPausa = false;
     }
 
-    void BTN_SalirClick()
+    public void BTN_SalirClick()
     {
         canvasConfirmacionSalir.enabled = true;
     }

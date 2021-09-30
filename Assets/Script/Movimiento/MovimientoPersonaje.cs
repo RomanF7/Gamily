@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MovimientoPersonaje : MonoBehaviour
@@ -16,44 +17,39 @@ public class MovimientoPersonaje : MonoBehaviour
     //Variables publicas
     public float velocidadNormal, salto;
     public SpriteRenderer jeringaRoja, jeringaAzul;
-    public Sprite cooldownR, cooldownA, normalR, normalA;
-    public Transform transformFondo;
+    public Sprite cooldownJR, cooldownJA, normalJR, normalJA;
     public Canvas canvasMenuPausa;
     public MenuPausa menuPausa;
 
     //Variables privadas
     private Rigidbody2D rigidbody;
     private Animator animator;
-    private float horizontal, vertical, duracionR, duracionA, velocidadAPasar, habilidadRapida, velocidadActual, cronometroR, cronometroA;
+    private float horizontal, vertical, duracionJR, duracionJA, habilidadLenta, habilidadRapida, velocidadActual, cronometroJR, cronometroJA;
     private int contador;
-    private bool estaEnElPiso, habilidadR, habilidadA, pararTiempo, enRampa/*, muerte*/;
-    private Vector3 margenDeErrorFondo;
+    private bool estaEnElPiso, habilidadJR, habilidadJA, pararTiempo;
 
     // Start
-    void Start()
+    private void Start()
     {
         //Setteo de varibles por defecto
         estaEnElPiso = false;
         pararTiempo = false;
-        enRampa = false;
         //muerte = false;
 
-        cronometroR = 0;
-        cronometroA = 0;
-        duracionR = 0;
-        duracionA = 0;
+        cronometroJR = 0;
+        cronometroJA = 0;
+        duracionJR = 0;
+        duracionJA = 0;
 
         velocidadActual = velocidadNormal;
         habilidadRapida = velocidadNormal * 2.5f;
-
-        margenDeErrorFondo = new Vector3(1.08f, 4f, 0f);
 
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update
-    void Update()
+    private void Update()
     {
         //Tomar ejes
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -61,6 +57,12 @@ public class MovimientoPersonaje : MonoBehaviour
 
         //Jeringas
         Jeringas();
+
+        //Calibracion de Horizontal y Vertical
+        CalibrarHorizontalVertical();
+
+        //Rotar segun el eje
+        Rotar();
 
         //Movimiento
         MapeadoDeTeclaSinFisicas();
@@ -81,23 +83,18 @@ public class MovimientoPersonaje : MonoBehaviour
             if (horizontal == 1)
             {
                 transform.Translate(Time.deltaTime * horizontal * velocidadActual, 0f, 0f);
-                animator.SetBool("correrDerecha", true);
-                animator.SetBool("correrIzquierda", false);
-
+                animator.SetBool("Correr", true);
                 //Ir a la izquierda
             }
             else if (horizontal == -1)
             {
                 transform.Translate(Time.deltaTime * horizontal * velocidadActual, 0f, 0f);
-                animator.SetBool("correrDerecha", false);
-                animator.SetBool("correrIzquierda", true);
-
+                animator.SetBool("Correr", true);                
                 //Sin hacer nada
             }
             else if (horizontal == 0)
             {
-                animator.SetBool("correrDerecha", false);
-                animator.SetBool("correrIzquierda", false);
+                animator.SetBool("Correr", false);
             }
 
             //Reinicio de "Nivel1"
@@ -139,49 +136,49 @@ public class MovimientoPersonaje : MonoBehaviour
     private void Jeringas()
     {
         //Dosis lento el entorno
-        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroA)
+        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroJA)
         {
 
-            jeringaAzul.sprite = cooldownA;
-            cronometroA = Time.unscaledTime + 3f;
-            duracionA = Time.unscaledTime + 3f;
-            habilidadA = true;
+            jeringaAzul.sprite = cooldownJA;
+            cronometroJA = Time.unscaledTime + 3f;
+            duracionJA = Time.unscaledTime + 3f;
+            habilidadJA = true;
         }
 
-        if (Time.unscaledTime <= duracionA && habilidadA == true)
+        if (Time.unscaledTime <= duracionJA && habilidadJA == true)
         {
-            velocidadAPasar = velocidadNormal / 2f;
+            habilidadLenta = velocidadNormal / 2f;
         }
-        else if (habilidadA == true)
+        else if (habilidadJA == true)
         {
-            jeringaAzul.sprite = normalA;
-            habilidadA = false;
+            jeringaAzul.sprite = normalJA;
+            habilidadJA = false;
             velocidadActual = velocidadNormal;
         }
 
         //Dosis velocidad
-        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroR)
+        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroJR)
         {
 
-            jeringaRoja.sprite = cooldownR;
-            cronometroR = Time.unscaledTime + 3f;
-            duracionR = Time.unscaledTime + 3f;
-            habilidadR = true;
+            jeringaRoja.sprite = cooldownJR;
+            cronometroJR = Time.unscaledTime + 3f;
+            duracionJR = Time.unscaledTime + 3f;
+            habilidadJR = true;
         }
 
-        if (Time.unscaledTime <= duracionR && habilidadR == true)
+        if (Time.unscaledTime <= duracionJR && habilidadJR == true)
         {
             velocidadActual = habilidadRapida;
         }
-        else if (habilidadR == true)
+        else if (habilidadJR == true)
         {
-            jeringaRoja.sprite = normalR;
-            habilidadR = false;
+            jeringaRoja.sprite = normalJR;
+            habilidadJR = false;
             velocidadActual = velocidadNormal;
         }
 
         //Parar Tiempo
-        if (habilidadA == true && habilidadR == true)
+        if (habilidadJA == true && habilidadJR == true)
         {
             pararTiempo = true;
         }
@@ -197,15 +194,48 @@ public class MovimientoPersonaje : MonoBehaviour
         SceneManager.LoadScene("Nivel1");
     }
 
+    private void Rotar()
+    {
+        if (horizontal==1)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (horizontal == -1)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+    }
+
+    private void CalibrarHorizontalVertical()
+    {
+        if (horizontal >0.25f)
+        {
+            horizontal = 1;
+        }
+        else if (horizontal < -0.25)
+        {
+            horizontal = -1;
+        }
+
+        if (vertical > 0.25f)
+        {
+            vertical = 1;
+        }
+        else if (vertical < -0.25)
+        {
+            vertical = -1;
+        }
+    }
+
     //Getters
     public float GetVelocidadAPasar()
     {
-        return velocidadAPasar;
+        return habilidadLenta;
     }
 
     public bool GetHabilidadA()
     {
-        return habilidadA;
+        return habilidadJA;
     }
 
     public bool GetEstaEnElPiso()
@@ -232,15 +262,6 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.tag == "Pincho")
         {
             //muerte = true;
-        }
-
-        if (collision.gameObject.tag == "Rampa")
-        {
-            enRampa = true;
-        }
-        else
-        {
-            enRampa = false;
         }
     }
 }

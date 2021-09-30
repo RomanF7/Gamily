@@ -24,19 +24,19 @@ public class MenuPrincipal : MonoBehaviour
     }
 
     //OnClick
-    void BTN_NuevaPartidaClick()
+    public void BTN_NuevaPartidaClick()
     {
         empezar = true;
         SceneManager.LoadScene("Nivel1");
 
     }
 
-    void BTN_OpcionesClick()
+    public void BTN_OpcionesClick()
     {
         SceneManager.LoadScene("Opciones");
     }
 
-    void BTN_SalirClick()
+    public void BTN_SalirClick()
     {
         Application.Quit();
     }

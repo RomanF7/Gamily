@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogicaCamara : MonoBehaviour
 {
@@ -15,20 +16,25 @@ public class LogicaCamara : MonoBehaviour
     */
 
     //Variables publicas
-    public MovimientoPersonaje personaje;
-    public Transform transformPer/*, transformFondo*/;
-    public Vector3 posCamara, posFondo;
-
+    public Transform transformPer;
+    public Vector3 posCamara;
+    public SpriteRenderer jeringaR, jeringaA;
     private void Awake()
     {
         posCamara.z = -100;
-        posFondo.x = transformPer.position.x;
-        posFondo.z = 100;
+        if (Doctor.visitaAlDoctor)
+        {
+            jeringaR.enabled = true;
+        }
     }
-    
+
     private void LateUpdate()
     {
-        posCamara.x = transformPer.position.x;
-        transform.position = posCamara;
+        if (transformPer.position.x > -10.03f && transformPer.position.x < 60.62f)
+        {
+            posCamara.x = transformPer.position.x;
+            transform.position = posCamara;
+        }
+        
     }
 }

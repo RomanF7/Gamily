@@ -5,8 +5,8 @@ using UnityEngine;
 public class JeringaSuelta : MonoBehaviour
 {
     //Variables publicas
-    public SpriteRenderer renderJeringaA;
-    public GameObject indicacion1, indicacion2;
+    public SpriteRenderer renderJeringaAzul;
+    public GameObject texto1, texto2;
     
     //Variables privadas
     private bool enColisionConLaJeringaAzul;
@@ -20,14 +20,14 @@ public class JeringaSuelta : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && enColisionConLaJeringaAzul == true)
         {
-            renderJeringaA.enabled = true;
+            renderJeringaAzul.enabled = true;
             Destroy(gameObject);
-            Destroy(indicacion1);
-            Destroy(indicacion2);
+            Destroy(texto1);
+            Destroy(texto2);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {

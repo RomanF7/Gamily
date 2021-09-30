@@ -18,7 +18,7 @@ public class LenguajesMenuPrincipal : MonoBehaviour
         enIngles = LenguajesOpciones.enIngles;
     }
 
-    void Start()
+    private void Start()
     {
         if (enIngles == true)
         {

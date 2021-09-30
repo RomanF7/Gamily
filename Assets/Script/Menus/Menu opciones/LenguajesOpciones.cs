@@ -16,19 +16,19 @@ public class LenguajesOpciones : MonoBehaviour
     //Nota n°1: Como una tarde para hacer una variable globar porque en Google hay mucha información. Pero era re facil solo añadiendo "static" .
     public static bool enIngles;
 
-    void Start()
+    public void Start()
     {
         btn_banderas.onClick.AddListener(BTN_banderas);
         Debug.Log(enIngles);
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         EnIngles();
     }
 
-    void BTN_banderas()
+    public void BTN_banderas()
     {
         if (enIngles == true)
         {

@@ -8,55 +8,34 @@ using System;
 
 public class MenuOpciones : MonoBehaviour
 {
-
-    private bool modoSincronizacion;
-
     //Variables publicas
-    public Button btn_predeterminado, btn_oK, btn_irMenu;
-    public Image crucecita;
+    public Button btn_predeterminado, btn_oK, btn_IrMenu;
+    public Image cruz;
     public TMP_Dropdown subMenuDeResoluciones;
     public GameObject admin;
 
-    void Start()
+    public void Start()
     {
-        modoSincronizacion = false;
-
         //Añadir Listeners
-        btn_predeterminado.onClick.AddListener(BTN_predeterminadoClick);
-        btn_oK.onClick.AddListener(BTN_oKClick);
-        btn_irMenu.onClick.AddListener(BTN_irMenu);
+        btn_predeterminado.onClick.AddListener(BTN_PredeterminadoClick);
+        btn_oK.onClick.AddListener(BTN_OKClick);
+        btn_IrMenu.onClick.AddListener(BTN_IrMenu);
     }
 
     //OnClick
-    void BTN_predeterminadoClick()
+    public void BTN_PredeterminadoClick()
     {
         //Setea por defecto las opciones (Futuro)
     }
-
-    void BTN_oKClick()
+    public void BTN_OKClick()
     {
         TomarResolucion();
     }
-
-    void BTN_sincronizacionVer()
-    {
-        if (modoSincronizacion == false)
-        {
-            modoSincronizacion = true;
-            crucecita.enabled = true;
-        }
-        else if (modoSincronizacion == true)
-        {
-            modoSincronizacion = false;
-            crucecita.enabled = false;
-        }
-    }
-
-    void BTN_irMenu()
+    public void BTN_IrMenu()
     {
         SceneManager.LoadScene("MenuPrincipal");
     }
-    void TomarResolucion()
+    public void TomarResolucion()
     {
         bool pasar = false;
         int posicion = subMenuDeResoluciones.value,ancho, largo;

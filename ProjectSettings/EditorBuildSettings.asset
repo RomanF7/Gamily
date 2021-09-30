@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 3d454af424dcca6409259beb79cd0ba4
   - enabled: 1
-    path: Assets/Scenes/Niveles/Nivel1.unity
+    path: Assets/Scenes/Niveles/Acto1/Nivel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Opciones.unity
     guid: b3f0e16f0dded6c409499fde29122e3e
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Acto1/Laboratorio.unity
+    guid: 7d7c3e7b1f472c94e8ca2abb9a39af4e
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Acto1/Nivel1 (Noche).unity
+    guid: 5d2309bfd944cde4883c4a45e6a48616
   m_configObjects: {}
