@@ -629,8 +629,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_predeterminado: {fileID: 1775815839}
   btn_oK: {fileID: 1505651328}
-  btn_irMenu: {fileID: 345244137}
-  crucecita: {fileID: 612758622}
+  btn_IrMenu: {fileID: 345244137}
+  cruz: {fileID: 0}
   subMenuDeResoluciones: {fileID: 85121403}
   admin: {fileID: 275948941}
 --- !u!1 &275948941
@@ -3024,16 +3024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649f62b385038dd42bf6f575b2316e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn_flechitaDerecha: {fileID: 937094086}
-  btn_flechitaIzquierda: {fileID: 1064720487}
-  barritas:
-  - {fileID: -1000968801480172752, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -213694317816267980, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -3316440261334819941, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: 7121788682546870492, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -3293347874408328644, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -7772759832573796507, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  barras: {fileID: 1446125606}
+  btn_FlechaIDerecha: {fileID: 0}
+  btn_FlechaIzquierda: {fileID: 0}
+  barraIndividual: []
+  imgBarras: {fileID: 0}
 --- !u!1 &1681001457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3084,16 +3078,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649f62b385038dd42bf6f575b2316e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn_flechitaDerecha: {fileID: 643927915}
-  btn_flechitaIzquierda: {fileID: 1834376317}
-  barritas:
-  - {fileID: -1000968801480172752, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -213694317816267980, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -3316440261334819941, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: 7121788682546870492, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -3293347874408328644, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  - {fileID: -7772759832573796507, guid: 69cb8949708a0f24489c0f43474fa49c, type: 3}
-  barras: {fileID: 1726499121}
+  btn_FlechaIDerecha: {fileID: 0}
+  btn_FlechaIzquierda: {fileID: 0}
+  barraIndividual: []
+  imgBarras: {fileID: 0}
 --- !u!1 &1726499119
 GameObject:
   m_ObjectHideFlags: 0
