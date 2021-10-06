@@ -16,25 +16,51 @@ public class LogicaCamara : MonoBehaviour
     */
 
     //Variables publicas
-    public Transform transformPer;
+    public Transform transformPer, transformIzq, transformDer, auxiliarDistanciaIzquierda, auxiliarDistanciaDerecha;
     public Vector3 posCamara;
-    public SpriteRenderer jeringaR, jeringaA;
+    private bool izquierda, derecha;
+
     private void Awake()
     {
+        
         posCamara.z = -100;
-        if (Doctor.visitaAlDoctor)
-        {
-            jeringaR.enabled = true;
-        }
+        izquierda = false;
+        derecha = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
     }
 
     private void LateUpdate()
     {
-        if (transformPer.position.x > -10.03f && transformPer.position.x < 60.62f)
+        Debug.Log("Distancia: " + Vector2.Distance(transformPer.position, transformDer.position));
+        if (Vector2.Distance(auxiliarDistanciaIzquierda.position, transformIzq.position) > 0.6f && Vector2.Distance(auxiliarDistanciaDerecha.position,transformDer.position) > 0.8f)
         {
             posCamara.x = transformPer.position.x;
             transform.position = posCamara;
         }
-        
+        else if(Vector2.Distance(transformPer.position, transformIzq.position) > 9.8f && Vector2.Distance(transformPer.position, transformIzq.position) < 11 ||  Vector2.Distance(transformPer.position, transformDer.position) > 9.8f && Vector2.Distance(transformPer.position, transformDer.position) < 11)
+        {
+            posCamara.x = transformPer.position.x;
+            transform.position = posCamara;
+        }
+
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Izquierda")
+        {
+            izquierda = true;
+            Debug.Log("EN CONTACTO");
+        }
+        else
+        {
+            izquierda = false;
+        }
     }
 }

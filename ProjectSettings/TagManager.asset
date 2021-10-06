@@ -10,6 +10,7 @@ TagManager:
   - Ingles
   - Ciudad
   - Pasto
+  - Izquierda
   layers:
   - Default
   - TransparentFX

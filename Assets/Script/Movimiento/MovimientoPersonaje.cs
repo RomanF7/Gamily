@@ -16,7 +16,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     //Variables publicas
     public float velocidadNormal, salto;
-    public SpriteRenderer jeringaRoja, jeringaAzul;
+    public Image jeringaRojaHUD, jeringaAzulHUD;
     public Sprite cooldownJR, cooldownJA, normalJR, normalJA;
     public Canvas canvasMenuPausa;
     public MenuPausa menuPausa;
@@ -27,6 +27,14 @@ public class MovimientoPersonaje : MonoBehaviour
     private float horizontal, vertical, duracionJR, duracionJA, habilidadLenta, habilidadRapida, velocidadActual, cronometroJR, cronometroJA;
     private int contador;
     private bool estaEnElPiso, habilidadJR, habilidadJA, pararTiempo;
+
+    private void Awake()
+    {
+        if (Doctor.visitaAlDoctor)
+        {
+            jeringaRojaHUD.enabled = true;
+        }
+    }
 
     // Start
     private void Start()
@@ -47,7 +55,7 @@ public class MovimientoPersonaje : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
-
+    
     // Update
     private void Update()
     {
@@ -89,7 +97,7 @@ public class MovimientoPersonaje : MonoBehaviour
             else if (horizontal == -1)
             {
                 transform.Translate(Time.deltaTime * horizontal * velocidadActual, 0f, 0f);
-                animator.SetBool("Correr", true);                
+                animator.SetBool("Correr", true);
                 //Sin hacer nada
             }
             else if (horizontal == 0)
@@ -139,7 +147,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroJA)
         {
 
-            jeringaAzul.sprite = cooldownJA;
+            jeringaAzulHUD.sprite = cooldownJA;
             cronometroJA = Time.unscaledTime + 3f;
             duracionJA = Time.unscaledTime + 3f;
             habilidadJA = true;
@@ -151,7 +159,7 @@ public class MovimientoPersonaje : MonoBehaviour
         }
         else if (habilidadJA == true)
         {
-            jeringaAzul.sprite = normalJA;
+            jeringaAzulHUD.sprite = normalJA;
             habilidadJA = false;
             velocidadActual = velocidadNormal;
         }
@@ -160,7 +168,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroJR)
         {
 
-            jeringaRoja.sprite = cooldownJR;
+            jeringaRojaHUD.sprite = cooldownJR;
             cronometroJR = Time.unscaledTime + 3f;
             duracionJR = Time.unscaledTime + 3f;
             habilidadJR = true;
@@ -172,7 +180,7 @@ public class MovimientoPersonaje : MonoBehaviour
         }
         else if (habilidadJR == true)
         {
-            jeringaRoja.sprite = normalJR;
+            jeringaRojaHUD.sprite = normalJR;
             habilidadJR = false;
             velocidadActual = velocidadNormal;
         }
@@ -196,7 +204,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void Rotar()
     {
-        if (horizontal==1)
+        if (horizontal == 1)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
@@ -208,7 +216,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void CalibrarHorizontalVertical()
     {
-        if (horizontal >0.25f)
+        if (horizontal > 0.25f)
         {
             horizontal = 1;
         }
