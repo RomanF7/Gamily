@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Niveles/Acto1/Nivel1.unity
+- path: Assets/Scenes/Niveles/Acto1/Laboratorio.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

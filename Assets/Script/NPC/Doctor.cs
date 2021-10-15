@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Doctor : MonoBehaviour
 {
+    public static bool visitaAlDoctor;
+    public SpriteRenderer jeringaRoja;
     [HideInInspector]
-    public static bool visitaAlDoctor = false;
-
-    [SerializeField]
-    private SpriteRenderer jeringaRoja;
-    private Animator animator;
-    private float[] cronometro;
-    private bool roto = false;
+    public Animator animator;
+    [HideInInspector]
+    public float[] cronometro;
+    [HideInInspector]
+    public bool roto = false;
     private void Awake()
     {
+        visitaAlDoctor = false;
         animator = GetComponent<Animator>();
         cronometro = new float[2];
         cronometro[0] = 0;

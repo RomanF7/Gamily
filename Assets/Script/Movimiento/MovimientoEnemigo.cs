@@ -9,7 +9,7 @@ public class MovimientoEnemigo : MonoBehaviour
     private float cronometro;
 
     //Variables publicas
-    public MovimientoPersonaje jugador;
+    public Jugador jugador;
     public float velocidad, duracion;
 
     //Start
@@ -24,16 +24,16 @@ public class MovimientoEnemigo : MonoBehaviour
     public void Update()
     {
         //Comprobar que se haya parado el tiempo
-        if (jugador.GetPararTiempo() == true)
+        if (Jeringas.pararTiempo == true)
         {
             velocidad = 0f;
         }
         else
         {
             //Verifica que velocidad tomará
-            if (jugador.GetHabilidadA() == true)
+            if (Jeringas.habilidadJA == true)
             {
-                velocidad = jugador.GetVelocidadAPasar();
+                velocidad = Jeringas.habilidadLenta;
             }
             else
             {

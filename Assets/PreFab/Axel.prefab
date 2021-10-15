@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4419796028850294488}
   - component: {fileID: 4419796028850294489}
   - component: {fileID: 4419796028850294495}
+  - component: {fileID: 3836210590330319613}
   m_Layer: 0
   m_Name: Axel
   m_TagString: Player
@@ -154,13 +155,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0203669bcfec5184983f988cec7c0b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadNormal: 2
   salto: 275
-  jeringaRoja: {fileID: 0}
-  jeringaAzul: {fileID: 0}
+  canvasMenuPausa: {fileID: 0}
+  menuPausa: {fileID: 0}
+--- !u!114 &3836210590330319613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419796028850294482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac8047fa9292f54fb10dc376530deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jeringaRojaHUD: {fileID: 0}
+  jeringaAzulHUD: {fileID: 0}
   cooldownJR: {fileID: 0}
   cooldownJA: {fileID: 0}
   normalJR: {fileID: 0}
   normalJA: {fileID: 0}
-  canvasMenuPausa: {fileID: 0}
-  menuPausa: {fileID: 0}

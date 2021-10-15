@@ -18,14 +18,10 @@ public class LogicaCamara : MonoBehaviour
     //Variables publicas
     public Transform transformPer, transformIzq, transformDer, auxiliarDistanciaIzquierda, auxiliarDistanciaDerecha;
     public Vector3 posCamara;
-    private bool izquierda, derecha;
 
     private void Awake()
     {
-        
         posCamara.z = -100;
-        izquierda = false;
-        derecha = false;
     }
 
     private void OnDrawGizmos()
@@ -36,7 +32,7 @@ public class LogicaCamara : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log("Distancia: " + Vector2.Distance(transformPer.position, transformDer.position));
+        //Debug.Log("Distancia: " + Vector2.Distance(transformPer.position, transformDer.position));
         if (Vector2.Distance(auxiliarDistanciaIzquierda.position, transformIzq.position) > 0.6f && Vector2.Distance(auxiliarDistanciaDerecha.position,transformDer.position) > 0.8f)
         {
             posCamara.x = transformPer.position.x;
@@ -48,19 +44,6 @@ public class LogicaCamara : MonoBehaviour
             transform.position = posCamara;
         }
 
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Izquierda")
-        {
-            izquierda = true;
-            Debug.Log("EN CONTACTO");
-        }
-        else
-        {
-            izquierda = false;
-        }
+        
     }
 }
