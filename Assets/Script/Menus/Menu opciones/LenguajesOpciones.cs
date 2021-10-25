@@ -7,7 +7,6 @@ public class LenguajesOpciones : MonoBehaviour
 {
     public Image[] textos;
     public Sprite[] imagenesTextoING, imagenesTextoESP, spriteBtnING, spriteBtnESP, spriteBandera;
-    public MenuOpciones menuOpciones;
     public Button[] botones;
     public Button btn_banderas;
     public SpriteState[] accionESP;

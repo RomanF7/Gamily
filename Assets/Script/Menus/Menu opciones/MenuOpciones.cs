@@ -14,12 +14,20 @@ public class MenuOpciones : MonoBehaviour
     public TMP_Dropdown subMenuDeResoluciones;
     public GameObject admin;
 
+    private AudioSource audioSource;
+
+    private void Update()
+    {
+        audioSource.volume = ControlAudio.volumen;
+    }
+
     public void Start()
     {
         //Añadir Listeners
         btn_predeterminado.onClick.AddListener(BTN_PredeterminadoClick);
         btn_oK.onClick.AddListener(BTN_OKClick);
         btn_IrMenu.onClick.AddListener(BTN_IrMenu);
+        audioSource = GetComponent<AudioSource>();
     }
 
     //OnClick
@@ -68,4 +76,5 @@ public class MenuOpciones : MonoBehaviour
         Screen.SetResolution(ancho, largo,Screen.fullScreen);
 
     }
+
 }

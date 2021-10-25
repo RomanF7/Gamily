@@ -14,6 +14,11 @@ public class MenuPrincipal : MonoBehaviour
 
     //Variables privadas
     private bool empezar, enIngles;
+    private AudioSource audioSource;
+    private void Update()
+    {
+        audioSource.volume = ControlAudio.volumen;
+    }
 
     private void Start()
     {
@@ -21,13 +26,14 @@ public class MenuPrincipal : MonoBehaviour
         btn_opciones.onClick.AddListener(BTN_OpcionesClick);
         btn_salir.onClick.AddListener(BTN_SalirClick);
         btn_nuevaPartida.onClick.AddListener(BTN_NuevaPartidaClick);
+        audioSource = GetComponent<AudioSource>();
     }
 
     //OnClick
     public void BTN_NuevaPartidaClick()
     {
         empezar = true;
-        SceneManager.LoadScene("Nivel1");
+        SceneManager.LoadScene("Casa");
 
     }
 

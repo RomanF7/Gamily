@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+using TMPro;
+
+public class DialogoPorDefecto : MonoBehaviour
+{
+    public char numero = '1';
+    public TMP_Text texto;
+    private string parafo;
+    private string[] oracionESP, oracionING;
+
+
+    private void Awake()
+    {
+        string[] datosING = File.ReadAllLines(Application.dataPath + "\\Idiomas\\ING.txt");
+        string[] datosESP = File.ReadAllLines(Application.dataPath + "\\Idiomas\\ESP.txt");
+        oracionESP = datosESP;
+        oracionING = datosING;
+    }
+    private void Update()
+    {
+        Traducir(numero);
+    }
+    public void Traducir(char index)
+    {
+
+        if (LenguajesOpciones.enIngles)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                parafo = parafo + "\n" + oracionING[i];
+            }
+            texto.SetText(parafo);
+        }
+        else if (LenguajesOpciones.enIngles == false)
+        {
+
+            for (int i = 0; i < oracionESP.Length; i++)
+            {
+                char[] letras = oracionESP[i].ToCharArray();
+                if (letras[0] == index)
+                {
+                    for (int j = 1; j < letras.Length; j++)
+                    {
+                        parafo = parafo + letras[j];
+                    }
+                    parafo = parafo + "\n";
+                }
+            }
+        }
+    }
+}

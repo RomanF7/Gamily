@@ -8,10 +8,11 @@ public class MenuPausa : MonoBehaviour
     //Variables publicas
     public Button btn_continuar, btn_menuPrincipal;
     public Canvas canvasConfirmacionSalir;
+    public static MenuPausa instancia;
 
     //Variables privadas
     private Canvas canvasPausa;
-    private bool enPausa;
+    public static bool enPausa;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class MenuPausa : MonoBehaviour
 
         //Toman componente
         canvasPausa = GetComponent<Canvas>();
+        instancia = this;
     }
 
     private void Update()
@@ -28,10 +30,6 @@ public class MenuPausa : MonoBehaviour
         if(canvasPausa.enabled == true)
         {
             enPausa = true;
-        }
-        else
-        {
-            enPausa = false;
         }
     }
 
@@ -45,11 +43,5 @@ public class MenuPausa : MonoBehaviour
     public void BTN_SalirClick()
     {
         canvasConfirmacionSalir.enabled = true;
-    }
-
-    //Getters
-    public bool GetEnPausa()
-    {
-        return enPausa;
     }
 }

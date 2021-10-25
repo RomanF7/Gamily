@@ -11,6 +11,8 @@ TagManager:
   - Ciudad
   - Pasto
   - Izquierda
+  - Folleto
+  - RecuerdoPlata
   layers:
   - Default
   - TransparentFX
