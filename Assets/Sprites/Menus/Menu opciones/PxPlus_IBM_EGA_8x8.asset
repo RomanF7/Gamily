@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: PxPlus_IBM_EGA_8x8
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1346405744
   material: {fileID: 9173597948908922736}
-  materialHashCode: 0
+  materialHashCode: 387514416
   m_Version: 1.1.0
   m_SourceFontFileGUID: 583401cc1aa49104cba304f1d7dd0a5f
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 583401cc1aa49104cba304f1d7dd0a5f, type: 3}

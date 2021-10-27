@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Niveles/Acto1/Nivel1 (Noche).unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0

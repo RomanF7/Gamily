@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Px437_IBM_EGA_8x8
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -280917670
   material: {fileID: 4307959300529978145}
-  materialHashCode: 0
+  materialHashCode: -2133565382
   m_Version: 1.1.0
   m_SourceFontFileGUID: d9ef15b51f5de894f88feda4a38c632c
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: d9ef15b51f5de894f88feda4a38c632c, type: 3}
