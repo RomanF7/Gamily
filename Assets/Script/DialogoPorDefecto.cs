@@ -1,56 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using System.IO;
 using TMPro;
+using UnityEngine;
 
 public class DialogoPorDefecto : MonoBehaviour
 {
-    public static DialogoPorDefecto intancia;
-    private string parafo;
+    public static DialogoPorDefecto instancia;
+    private string parrafo;
     private string[] oracionESP, oracionING;
 
 
 
     private void Awake()
     {
-        string[] datosING = File.ReadAllLines(Application.dataPath + "\\Idiomas\\ING.txt",System.Text.Encoding.UTF7);
+        string[] datosING = File.ReadAllLines(Application.dataPath + "\\Idiomas\\ING.txt", System.Text.Encoding.UTF7);
         string[] datosESP = File.ReadAllLines(Application.dataPath + "\\Idiomas\\ESP.txt", System.Text.Encoding.UTF7);
         oracionESP = datosESP;
         oracionING = datosING;
-        intancia = this;
+        instancia = this;
     }
 
     public void Traducir(string index, TMP_Text text)
     {
-        parafo = "";
+        parrafo = "";
         string aux = "";
-
-        if (LenguajesOpciones.enIngles)
+        if (index.Length == 1)
+            index = "0" + index;
+        if (LenguajesOpciones.enIngles && text.enabled == true)
         {
             for (int i = 0; i < oracionING.Length; i++)
             {
                 aux = "";
                 char[] letras = oracionING[i].ToCharArray();
-                for (int h = 0; h < letras.Length; h++)
+                /*  for (int h = 0; h < letras.Length; h++)
                 {
                     if (char.IsDigit(letras[h]))
                     {
                         aux = aux + letras[h];
                     }
+                }   */
+                // no sé qué hace este código, lo cambié por el otro
+                // att. igna c:
+
+                if (char.IsDigit(letras[0]) && char.IsDigit(letras[1]))
+                {
+                    aux = aux + letras[0] + letras[1];
                 }
+
                 if (aux == index)
                 {
-                    for (int j = 1; j < letras.Length; j++)
+                    for (int j = 2; j < letras.Length; j++)
                     {
-                        parafo = parafo + letras[j];
+                        parrafo = parrafo + letras[j];
                         aux = "";
                     }
-                    parafo = parafo + "\n";
+                    parrafo = parrafo + "\n";
                 }
             }
-            text.SetText(parafo);
+            text.SetText(parrafo);
         }
         else if (LenguajesOpciones.enIngles == false && text.enabled == true)
         {
@@ -60,23 +66,23 @@ public class DialogoPorDefecto : MonoBehaviour
                 aux = "";
                 char[] letras = oracionESP[i].ToCharArray();
 
-                    if (char.IsDigit(letras[0]))
-                    {
-                        aux = aux + letras[0];
-                    }
-                
+                if (char.IsDigit(letras[0]) && char.IsDigit(letras[1]))
+                {
+                    aux = aux + letras[0] + letras[1];
+                }
+
                 if (aux == index)
                 {
-                    for (int j = 1; j < letras.Length; j++)
+                    for (int j = 2; j < letras.Length; j++)
                     {
-                        parafo = parafo + letras[j];
+                        parrafo = parrafo + letras[j];
                         aux = "";
                     }
-                    
-                    parafo = parafo + "\n";
+
+                    parrafo = parrafo + "\n";
                 }
             }
-            text.SetText(parafo);
+            text.SetText(parrafo);
         }
     }
 }

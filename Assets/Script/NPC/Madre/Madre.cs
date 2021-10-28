@@ -41,6 +41,8 @@ public class Madre : MonoBehaviour
             MenuPausa.enPausa = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+            click++;
 
         if (Time.time < cronometro)
         {
@@ -55,19 +57,27 @@ public class Madre : MonoBehaviour
 
         if (Vector2.Distance(transform.position, axel.position) < 3 && distanciaCorrecta == false)
         {
-            DialogoPorDefecto.intancia.Traducir(click + "", textoDialogo);
+            DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             canvasDialogo.enabled = true;
             animator.enabled = false;
             distanciaCorrecta = true;
         }
 
-        if (click == 1 && Input.GetKeyDown(KeyCode.E))
+        switch (click)
         {
-            efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
-            textoDialogo.enabled = false;
-            canvasDialogo.enabled = false;
-            MenuPausa.enPausa = false;
-            
+            case 1:
+                DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                break;
+            case 2: case 3: case 4:
+            case 5: case 6:
+                DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                break;
+            case 7:
+                efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
+                textoDialogo.enabled = false;
+                canvasDialogo.enabled = false;
+                MenuPausa.enPausa = false;
+                break;
         }
     }
 }

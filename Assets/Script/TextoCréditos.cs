@@ -1,6 +1,6 @@
 using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 
 
@@ -16,12 +16,23 @@ public class TextoCréditos : MonoBehaviour
     void Awake()
     {
         TextoTMP = GetComponent<TMP_Text>();
-        creditos[0] = "- Time is Money -\nDesarrollado por Gamily";
-        creditos[1] = "Coordinador, Programación:\nRomán Ferreira";
-        creditos[2] = "Subcoordinador, Supervisión:\nMatías Barretto";
-        creditos[3] = "Arte, Sonido, Historia:\nIgnacio Rivero";
-        creditos[4] = "Análisis y Diseño:\nFacundo Cor";
-        creditos[5] = "Administración de Negocios Digitales:\nGonzalo Ferrando";
+        if (LenguajesOpciones.enIngles)
+        {
+            creditos[0] = "- Time is Money -\nDeveloped by Gamily";
+            creditos[1] = "Coordinator, Programming:\nRomán Ferreira";
+            creditos[2] = "Subcoordinator, Supervisior:\nMatías Barretto";
+            creditos[3] = "Art, Sound, Story:\nIgnacio Rivero";
+            creditos[4] = "Analysis and Design:\nFacundo Cor";
+            creditos[5] = "Digital Business Administration:\nGonzalo Ferrando";
+        } else
+        {
+            creditos[0] = "- Time is Money -\nDesarrollado por Gamily";
+            creditos[1] = "Coordinador, Programación:\nRomán Ferreira";
+            creditos[2] = "Subcoordinador, Supervisión:\nMatías Barretto";
+            creditos[3] = "Arte, Sonido, Historia:\nIgnacio Rivero";
+            creditos[4] = "Análisis y Diseño:\nFacundo Cor";
+            creditos[5] = "Administración de Negocios Digitales:\nGonzalo Ferrando";
+        }
         TextoTMP.text = creditos[0];
     }
 
@@ -29,7 +40,7 @@ public class TextoCréditos : MonoBehaviour
     IEnumerator Start()
     {
 
-        for (int i=0; i<creditos.Length; i++) 
+        for (int i = 0; i < creditos.Length; i++)
         {
             int caracteresVisiblesActual = 0;
             int contador = 0;
@@ -39,7 +50,7 @@ public class TextoCréditos : MonoBehaviour
             TextoTMP.ForceMeshUpdate();
 
             int caracteresVisiblesTotal = TextoTMP.textInfo.characterCount; // Obtener caracteres visibles del texto original.
-            
+
             while (!(caracteresVisiblesActual >= caracteresVisiblesTotal))
             {
                 caracteresVisiblesActual = contador % (caracteresVisiblesTotal + 1);
