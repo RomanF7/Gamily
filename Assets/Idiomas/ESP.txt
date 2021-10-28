@@ -1,22 +1,138 @@
-1Buenos dias hijo.
-1Compra el desayuno en el almacen pasando el puente.
-1(Muevete con A y D, con E interactuas)
-2Rayos me dieron $50 en vez de $70. Iré a casa a por mas plata, me preocupa la poca plata...áíóú
-3en la cuenta de ahorro de la familia.
-4Oh un folleto.
-4¿Que dice?
-6¿QUE UN MILLON?
-6Sin dudas tengo que ir a hablar con el doctor.
-6Este laboratorio queda despues del puente.
-7DDDDDDDDDDDDDDDDDDDDDD
-7DDDDDDDDDDDDDDDDDDDDDD
-7DDDDDDDDDDDDDDDDDDDDDD
-7DDDDDDDDDDDDDDDDDDDDDD
-7DDDDDDDDDDDDDDDDDDDDDD
-7DDDDDDDDDDDDDDDDDDDDDD
-8EEEEEEEEEEEEEEEEEEEEEE
-8EEEEEEEEEEEEEEEEEEEEEE
-8EEEEEEEEEEEEEEEEEEEEEE
-8EEEEEEEEEEEEEEEEEEEEEE
-8EEEEEEEEEEEEEEEEEEEEEE
-8EEEEEEEEEEEEEEEEEEEEEE
+1Buenas tardes, hijo.
+1¿Podrías ir a comprar
+1la cena en el
+1almacén?
+2Sí, claro mamá.
+2
+2El que queda pasando
+2el puente, ¿no?
+3(Me llamo Axel, tengo
+319, y me mudé de nuevo
+3a este país hace poco)
+3
+3(Vivía en el exterior,
+3habíamos hecho ...
+4... una inversión
+4allí).
+4
+4(Todo iba bien 
+4hasta que hubo una
+4intervención y...
+5...eh, ¿Axel?
+5
+5¿Te vas a quedar ahí
+5parado?
+6Eh- ¡claro que no!
+6
+6(En fin, no hay mucho
+6tiempo para esta
+6historia...)
+7...Oh. Me faltan $20, 
+7qué extraño. Iré a
+7casa a buscar más
+7dinero.
+7Aunque, la verdad, me
+7preocupa ...
+8... que me falte, con 
+8toda la situación...
+9Oh, un folleto.
+9¿Qué es lo que dice?
+11...¿eh? La letra
+11pequeña dice...¿¿un 
+11millón??
+11Debería preguntar en
+11el laboratorio, debe
+11ser el que hay... ahí. 
+12...Eh, hola. Soy Axel,
+12y vengo por este
+12folleto, para unas
+12pruebas...
+12(¿Y será cierto lo del
+12dinero?)
+13Ah, sí, estás en el
+13lugar correcto. Aquí
+13tienes el contrato
+13si quieres saber los
+13detalles.
+14Ah, y sí, lo del
+14dinero es verdad.
+15Ah, gracias... Uh,
+15espere, ¿cómo sabía
+15que se lo iba a
+15preguntar?
+16Eh, nada, es que
+16presentí que lo podías
+16dudar.
+16
+16(Se notaba, con esa
+16cara...)
+17(En fin. Aquí dice que
+17él se hará responsable
+17de todo lo que él me
+17pruebe, ¿qué podría
+17salir mal?
+18Bien, si quieres,
+18puedes comenzar ahora,
+18con esta medicina. Es
+18prácticamente
+18inofensiva, así que no
+18te debería pasar nada.
+19Es más, puedes hasta
+19llevarla para hacer
+19esto tú mismo.
+19
+19Es así de seguro.
+20
+20(Has obtenido la
+20Medicina A).
+20
+20(Úsala con "F").
+21Bien, gracias.
+21(Siento que hay algo
+21extraño, si se
+21encarga de lo que ÉL
+21me pruebe, y me da el
+21control a mí?)
+22(...Eh, seguro que es
+22cosa mía).
+23¿Eh? (Me siento más...
+23...¿ágil?)
+24(Ahora puedes utilizar
+24la Medicina A para ir
+24más rápido).
+25(Oh no. El puente...
+25A lo mejor encuentro
+25la manera de volver
+25con esta medicina).
+26(Wow, qué salto.)
+26(Pero, eso es ¿un
+26policía?)
+27(¡Me vió! No puedo
+27explicar cómo salté el
+27puente, no creo que me
+27crea de todas formas..
+27Pero podría huir, ¿no?
+28(Uy, por poco...)
+28Hola mamá, no pude
+28comprar nada, me
+28faltó dinero...
+29Ah, no te preocupes,
+29Axel. Yo me encargo.
+30(Hace rato que no veo
+30a mi hermano, sería
+30buena idea hablar con
+30él.
+31Eh, hola, Axel.
+31*tos*
+32Oye, ¿todo bien?
+32¿Cómo te fue hoy en la
+32escuela?
+33S-sí, todo bien. Mamá
+33dice que tengo un
+33resfriado desde la
+33tarde, igual.
+34(Se ve más como una
+34gripe para mí, qué
+34raro. A lo mejor le
+34pregunto al doctor
+34mañana).
