@@ -56,9 +56,9 @@ public class TextoCréditos : MonoBehaviour
                 caracteresVisiblesActual = contador % (caracteresVisiblesTotal + 1);
                 TextoTMP.maxVisibleCharacters = caracteresVisiblesActual; // Obtener cuántos caracteres más se deben mostrar.
                 contador += 1;
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.06f);
             }
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.7f);
         }
         Destroy(TextoTMP);
 

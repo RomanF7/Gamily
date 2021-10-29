@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &13457058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7686966751828489601, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
+  m_PrefabInstance: {fileID: 152605895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &33238095
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,11 +341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -350,6 +361,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
+--- !u!114 &152605896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7686966751630305193, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
+  m_PrefabInstance: {fileID: 152605895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462326952
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +469,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.034638524, y: 0.011546791}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -458,7 +480,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 0.625}
+  m_Size: {x: 5.50906, y: 1.7565409}
   m_EdgeRadius: 0
 --- !u!114 &462326956
 MonoBehaviour:
@@ -560,6 +582,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &591981484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4419796028850294482, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
+  m_PrefabInstance: {fileID: 965575875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &591981493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591981484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2f1cc7033a72249a786a431dafc96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDialogo: {fileID: 13457058}
+  canvasDialogo: {fileID: 1198109741}
+  jeringaRoja: {fileID: 33238096}
+  cabeza: {fileID: 152605896}
 --- !u!1 &764832085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8423449085101188497, guid: 83d5eb1107b29314bb0b58788fc1cb51, type: 3}
@@ -964,7 +1007,7 @@ MonoBehaviour:
   jeringaRoja: {fileID: 462326954}
   animator: {fileID: 0}
   cronometro: []
-  roto: 0
+  agarrarJeringa: 0
 --- !u!114 &1006870126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,8 +1020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89aa9737652b5c468200759d0c64510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDialogo: {fileID: 0}
-  canvasDialogo: {fileID: 0}
+  textoDialogo: {fileID: 13457058}
+  canvasDialogo: {fileID: 1198109741}
+  cabeza: {fileID: 152605896}
+  caraPer: {fileID: 21300000, guid: dcf876e008135c84798ef8e6a548e584, type: 3}
+  caraDoc: {fileID: 21300000, guid: 1e28964c32658634896f3bbc9dbfe6ff, type: 3}
 --- !u!1 &1073820722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1270,11 @@ MonoBehaviour:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 7254068967072665788, guid: d5aaba6a8286f574892cf94c80e9c8ba, type: 3}
   m_PrefabInstance: {fileID: 1160345302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1198109741 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7686966752657846843, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
+  m_PrefabInstance: {fileID: 152605895}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203050751
 GameObject:

@@ -15,8 +15,8 @@ public class TomarJeringaRoja : MonoBehaviour
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
             jeringaRoja.enabled = true;
-            Destroy(gameObject);
             tenerJR = true;
+            Destroy(gameObject);
         }
     }
 }

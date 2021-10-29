@@ -10,7 +10,7 @@ public class DialogoNivel1 : MonoBehaviour
     [SerializeField]
     private Canvas dialogo;
     [SerializeField]
-    private GameObject folleto, efectoDialogo, efectoTransicion;
+    private GameObject folleto, efectoTransicion;
     private bool devueltaACAsa, mostrarFolleto, recordatorioPlata;
     private int click = 7;
 
@@ -22,8 +22,8 @@ public class DialogoNivel1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "RecuerdoPlata" && click == 7)
         {
-            efectoDialogo.SetActive(true);
-            efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
+           // efectoDialogo.SetActive(true);
+           // efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             dialogo.enabled = true;
             MenuPausa.enPausa = true;
@@ -33,8 +33,8 @@ public class DialogoNivel1 : MonoBehaviour
 
         if (collision.gameObject.tag == "Folleto" && click == 9)
         {
-            efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
-            dialogo.transform.position = new Vector3(5, 2, 0);
+           // efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
+            dialogo.transform.position = new Vector3(47.64f, 2, 0);
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             MenuPausa.enPausa = true;
             dialogo.enabled = true;
@@ -53,23 +53,16 @@ public class DialogoNivel1 : MonoBehaviour
             case 8:
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 break;
-            case 9:
-                if (recordatorioPlata == true)
-                {
-                    efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
+            case 9 when recordatorioPlata == true:
+                    //efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
                     dialogo.enabled = false;
                     MenuPausa.enPausa = false;
                     recordatorioPlata = false;
-                }
                 break;
-            case 10:
-                if (mostrarFolleto == true)
-                {
+            case 10 when mostrarFolleto == true:
                     dialogo.enabled = false;
                     folleto.transform.localScale = new Vector3(2, 2, 2);
-                    folleto.transform.position = new Vector3(5, -1, -20);
-                }
-
+                    folleto.transform.position = new Vector3(47.64f, -1, -20);
                 break;
             case 11:
                 folleto.SetActive(false);
@@ -77,7 +70,7 @@ public class DialogoNivel1 : MonoBehaviour
                 dialogo.enabled = true;
                 break;
             case 12:
-                efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
+               // efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
                 MenuPausa.enPausa = false;
                 dialogo.enabled = false;
                 break;

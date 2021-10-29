@@ -11,7 +11,9 @@ public class Doctor : MonoBehaviour
     [HideInInspector]
     public float[] cronometro;
     [HideInInspector]
-    public bool roto = false;
+    public bool agarrarJeringa = false;
+
+    public static Doctor instancia;
     private void Awake()
     {
         if (visitaAlDoctor == true) { visitaAlDoctor = true; }
@@ -19,6 +21,7 @@ public class Doctor : MonoBehaviour
         cronometro = new float[2];
         cronometro[0] = 0;
         cronometro[1] = 0;
+        instancia = this;
     }
 
     // Update is called once per frame
@@ -30,26 +33,16 @@ public class Doctor : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && visitaAlDoctor == false)
-        {
-            visitaAlDoctor = true;
-            cronometro[0] = Time.time + 3;
-            cronometro[1] = Time.time + 5;
-        }
-    }
-
-    private void Movimiento()
+    public void Movimiento()
     {
 
-        if (Time.time >= cronometro[1] && roto == false)
+        if (Time.time >= cronometro[1] && agarrarJeringa == false)
         {
             animator.enabled = false;
             jeringaRoja.enabled = true;
-            roto = true;
+            agarrarJeringa = true;
         }
-        else if (roto == false)
+        else if (agarrarJeringa == false)
         {
             animator.Play("CaminarDoctor");
             transform.Translate(2f * Time.deltaTime, 0, 0);

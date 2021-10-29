@@ -5,16 +5,6 @@ using UnityEngine.UI;
 
 public class LogicaCamara : MonoBehaviour
 {
-    /*
-
-    ****************************************************************************
-    ****************************************************************************
-    **ACLARACÓN TODA PARTE LÓGICA COMENTADA SE ESPERA QUE SE USE EN UN FUTURO.**
-    ****************************************************************************
-    ****************************************************************************
-
-    */
-
     //Variables publicas
     public Transform transformPer, transformIzq, transformDer, auxiliarDistanciaIzquierda, auxiliarDistanciaDerecha;
     public Vector3 posCamara;
@@ -29,11 +19,6 @@ public class LogicaCamara : MonoBehaviour
     private void Start()
     {
         audioSource.volume = ControlAudio.volumen;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
     }
 
     private void LateUpdate()

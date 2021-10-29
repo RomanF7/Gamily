@@ -15,9 +15,11 @@ public class Madre : MonoBehaviour
     [SerializeField]
     private Sprite caraPer, caraMad;
     [SerializeField]
-    private Transform axel;
+    private Image cabeza;
     [SerializeField]
-    private GameObject efectoDialogo;
+    private Transform axel;
+    //[SerializeField]
+    //private GameObject efectoDialogo;
 
     private float cronometro;
     private int click = 1;
@@ -25,8 +27,8 @@ public class Madre : MonoBehaviour
     private bool stop, distanciaCorrecta;
     private void Awake()
     {
-        efectoDialogo.SetActive(true);
-        efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
+       // efectoDialogo.SetActive(true);
+       // efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
         stop = false;
         cronometro = 0;
         animator = GetComponent<Animator>();
@@ -68,12 +70,23 @@ public class Madre : MonoBehaviour
             case 1:
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 break;
-            case 2: case 3: case 4:
-            case 5: case 6:
+            case 2:
+                cabeza.sprite = caraPer;
+                DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                break;
+            case 3: case 4:
+                DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                break;
+            case 5:
+                cabeza.sprite = caraMad;
+                DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                break;
+            case 6:
+                cabeza.sprite = caraPer;
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 break;
             case 7:
-                efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
+               // efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
                 textoDialogo.enabled = false;
                 canvasDialogo.enabled = false;
                 MenuPausa.enPausa = false;

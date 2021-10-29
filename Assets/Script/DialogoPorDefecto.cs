@@ -31,15 +31,6 @@ public class DialogoPorDefecto : MonoBehaviour
             {
                 aux = "";
                 char[] letras = oracionING[i].ToCharArray();
-                /*  for (int h = 0; h < letras.Length; h++)
-                {
-                    if (char.IsDigit(letras[h]))
-                    {
-                        aux = aux + letras[h];
-                    }
-                }   */
-                // no sé qué hace este código, lo cambié por el otro
-                // att. igna c:
 
                 if (char.IsDigit(letras[0]) && char.IsDigit(letras[1]))
                 {
