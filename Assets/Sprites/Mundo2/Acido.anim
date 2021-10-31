@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\xC1cido"
+  m_Name: Acido
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,6 +19,8 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
+    - time: 0
+      value: {fileID: -2985430588069860523, guid: af2cde07a96476446a77dee1f42ba318, type: 3}
     - time: 0.083333336
       value: {fileID: -1772496937543018192, guid: af2cde07a96476446a77dee1f42ba318, type: 3}
     - time: 0.16666667
@@ -68,6 +70,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: -2985430588069860523, guid: af2cde07a96476446a77dee1f42ba318, type: 3}
     - {fileID: -1772496937543018192, guid: af2cde07a96476446a77dee1f42ba318, type: 3}
     - {fileID: -7966939469375029594, guid: af2cde07a96476446a77dee1f42ba318, type: 3}
     - {fileID: 8552657838225048913, guid: af2cde07a96476446a77dee1f42ba318, type: 3}

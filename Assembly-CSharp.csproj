@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\MovimientoPasto.cs" />
     <Compile Include="Assets\LogicaTransicion.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\Script\MobHueso.cs" />
     <Compile Include="Assets\Script\Menus\Menu pausa\MenuConfirmacionSalir.cs" />
     <Compile Include="Assets\Script\Menus\Menu opciones\LenguajesOpciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -119,7 +120,7 @@
     <Compile Include="Assets\Script\NPC\Policia\PoliciaLogica.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\TextoCréditos.cs" />
-    <Compile Include="Assets\Script\MobHueso.cs" />
+    <Compile Include="Assets\Script\AnimaciónÁcido.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

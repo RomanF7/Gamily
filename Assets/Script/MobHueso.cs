@@ -4,11 +4,11 @@ public class MobHueso : MonoBehaviour
 {
     [SerializeField] private float velAux;
     private float velocidadTiempo, velocidad;
-    public Transform HuesoIzq, HuesoDer, objetivo;
+    public Transform PosIzq, PosDer, objetivo;
 
     void Start()
     {
-        objetivo = HuesoDer;
+        objetivo = PosDer;
     }
 
     [System.Obsolete]
@@ -32,13 +32,13 @@ public class MobHueso : MonoBehaviour
             }
         }
 
-            if (transform.position.x == HuesoDer.position.x)
+            if (transform.position.x == PosDer.position.x)
             {
-                objetivo = HuesoIzq;
+                objetivo = PosIzq;
             }
-            else if (transform.position.x == HuesoIzq.position.x)
+            else if (transform.position.x == PosIzq.position.x)
             {
-                objetivo = HuesoDer;
+                objetivo = PosDer;
             }
             velocidadTiempo = velocidad * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(objetivo.position.x, transform.position.y, transform.position.z), velocidadTiempo);

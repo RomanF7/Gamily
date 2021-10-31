@@ -27,7 +27,8 @@ public class LogicaFondo : MonoBehaviour
         if(Mathf.Abs(camaraTransform.position.x - transform.position.x) >= unidadDeTextura)
         {
             float offset = (camaraTransform.position.x - transform.position.x) % unidadDeTextura;
-            transform.position = new Vector3(camaraTransform.position.x + offset, transform.position.y);
+            // soy un boludo. -igna
+            transform.position = new Vector3(camaraTransform.position.x + offset, transform.position.y, transform.position.z);
         }
     }
 }
