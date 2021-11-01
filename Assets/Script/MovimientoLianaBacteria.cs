@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MobHueso : MonoBehaviour
+public class MovimientoLianaBacteria : MonoBehaviour
 {
     [SerializeField]
     private float velAux;
@@ -44,20 +46,4 @@ public class MobHueso : MonoBehaviour
         velocidadTiempo = velocidad * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(objetivo.position.x, transform.position.y, transform.position.z), velocidadTiempo);
     }
-    private void OnCollisionEnter2D(Collision2D colision)
-    {
-        if (colision.gameObject.tag == "Player")
-        {
-            colision.collider.transform.SetParent(transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D colision)
-    {
-        if (colision.gameObject.tag == "Player")
-        {
-            colision.collider.transform.SetParent(null);
-        }
-    }
-
 }

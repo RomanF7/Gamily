@@ -66,6 +66,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Script\MobHueso.cs" />
     <Compile Include="Assets\Script\Menus\Menu pausa\MenuConfirmacionSalir.cs" />
+    <Compile Include="Assets\Script\AnimaciónÁcido.cs" />
     <Compile Include="Assets\Script\Menus\Menu opciones\LenguajesOpciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Script\Menus\Menu opciones\MenuOpciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Script\MovimientoLianaBacteria.cs" />
     <Compile Include="Assets\ControlAudio.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\GuardarCargarDatos.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Script\Entorno\Laboratorio\TomarJeringaRoja.cs" />
+    <Compile Include="Assets\BacteriaLiana.cs" />
     <Compile Include="Assets\Script\NPC\Doctor\Doctor.cs" />
     <Compile Include="Assets\Script\NPC\Madre\Madre.cs" />
     <Compile Include="Assets\Script\Entorno\Fondo\LogicaFondo.cs" />
@@ -120,7 +123,7 @@
     <Compile Include="Assets\Script\NPC\Policia\PoliciaLogica.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\TextoCréditos.cs" />
-    <Compile Include="Assets\Script\AnimaciónÁcido.cs" />
+    <Compile Include="Assets\script.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

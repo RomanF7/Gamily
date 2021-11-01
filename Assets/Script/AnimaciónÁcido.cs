@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimaciónÁcido : MonoBehaviour
 {
-    [SerializeField] private Animator animacion;
+    private Animator animacion;
     [SerializeField] private float velocidad;
     void Start()
     {
