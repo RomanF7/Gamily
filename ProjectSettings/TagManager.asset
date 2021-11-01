@@ -13,6 +13,8 @@ TagManager:
   - Izquierda
   - Folleto
   - RecuerdoPlata
+  - AntesDelPuente
+  - DespuesDelPuente
   layers:
   - Default
   - TransparentFX

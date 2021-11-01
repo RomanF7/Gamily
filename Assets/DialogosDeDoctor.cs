@@ -63,7 +63,7 @@ public class DialogosDeDoctor : MonoBehaviour
                 break;
             case 20:
                 cabeza.enabled = false;
-                cabeza.sprite = caraPer;
+                cabeza.sprite = caraPer; 
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 canvasDialogo.enabled = false;
                 if (Doctor.visitaAlDoctor == false)

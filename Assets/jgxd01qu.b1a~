@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DialogoHermano : MonoBehaviour
+{
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Madre.terminaDialogomadre)
+        {
+            DialogoRegresodecasa();
+        }
+    }
+
+   private void DialogoRegresodecasa()
+    {
+
+    }
+}
