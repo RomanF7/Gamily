@@ -3651,8 +3651,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoDialogo: {fileID: 1797113568}
   dialogo: {fileID: 1032634714}
-  folleto: {fileID: 566717506}
+  GBFolleto: {fileID: 566717506}
   efectoTransicion: {fileID: 1919367604}
+  folletoESP: {fileID: 2920613853067066512, guid: b4a2ed42db3d3fc42b95c7a44079c4f9, type: 3}
+  folletoING: {fileID: 6062616880035959538, guid: b4a2ed42db3d3fc42b95c7a44079c4f9, type: 3}
+  folletoImg: {fileID: 566717509}
 --- !u!1 &1522073784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,6 +4210,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4021492973871403070, guid: f92bea191d151e74981c7a1610f66fe8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4021492973998690325, guid: f92bea191d151e74981c7a1610f66fe8, type: 3}
       propertyPath: m_PreserveAspect
       value: 0
@@ -4330,6 +4337,10 @@ PrefabInstance:
     - target: {fileID: 4021492974903948365, guid: f92bea191d151e74981c7a1610f66fe8, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021492974929787939, guid: f92bea191d151e74981c7a1610f66fe8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92bea191d151e74981c7a1610f66fe8, type: 3}

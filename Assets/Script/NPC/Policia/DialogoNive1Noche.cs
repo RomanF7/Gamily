@@ -51,6 +51,8 @@ public class DialogoNive1Noche : MonoBehaviour
                 canvasDialogo.enabled = false;
                 MenuPausa.enPausa = false;
                 movimientoPolicia = true;
+                Doctor.visitaAlDoctor = true;
+                click = 29;
                 break;
         }
     }

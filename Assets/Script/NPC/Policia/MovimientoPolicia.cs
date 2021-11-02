@@ -13,7 +13,6 @@ public class MovimientoPolicia : MonoBehaviour
 
     private void Awake()
     {
-        LogicaFlecha.enContacto = false;
         animator = GetComponent<Animator>();
     }
 
@@ -47,6 +46,8 @@ public class MovimientoPolicia : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && DialogoNive1Noche.movimientoPolicia == true)
         {
+            DialogoNive1Noche.movimientoPolicia = false;
+            LogicaFlecha.enContacto = false;
             SceneManager.LoadScene("Nivel1 (Noche)");
         }
     }

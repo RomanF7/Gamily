@@ -8,6 +8,10 @@ public class LogicaFlecha : MonoBehaviour
     [SerializeField]
     private GameObject efectoTransicion;
     public static bool enContacto;
+    private void Start()
+    {
+        enContacto = false;
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         enContacto = true;

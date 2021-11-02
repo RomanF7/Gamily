@@ -10,7 +10,11 @@ public class DialogoNivel1 : MonoBehaviour
     [SerializeField]
     private Canvas dialogo;
     [SerializeField]
-    private GameObject folleto, efectoTransicion;
+    private GameObject GBFolleto, efectoTransicion;
+    [SerializeField]
+    private Sprite folletoESP, folletoING;
+    [SerializeField]
+    private SpriteRenderer folletoImg;
     private bool devueltaACAsa, mostrarFolleto, recordatorioPlata;
     private int click = 7;
 
@@ -60,12 +64,20 @@ public class DialogoNivel1 : MonoBehaviour
                     recordatorioPlata = false;
                 break;
             case 10 when mostrarFolleto == true:
+                if (Doctor.visitaAlDoctor == true)
+                {
+                    folletoImg.sprite = folletoESP;
+                }
+                else
+                {
+                    folletoImg.sprite = folletoING;
+                }
                     dialogo.enabled = false;
-                    folleto.transform.localScale = new Vector3(2, 2, 2);
-                    folleto.transform.position = new Vector3(47.64f, -1, -20);
+                    GBFolleto.transform.localScale = new Vector3(2, 2, 2);
+                    GBFolleto.transform.position = new Vector3(47.64f, -1, -20);
                 break;
             case 11:
-                folleto.SetActive(false);
+                GBFolleto.SetActive(false);
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 dialogo.enabled = true;
                 break;
@@ -75,9 +87,9 @@ public class DialogoNivel1 : MonoBehaviour
                 dialogo.enabled = false;
                 break;
         }
-        if (Vector2.Distance(transform.position, folleto.transform.position) < 4 && devueltaACAsa == true)
+        if (Vector2.Distance(transform.position, GBFolleto.transform.position) < 4 && devueltaACAsa == true)
         {
-            folleto.SetActive(true);
+            GBFolleto.SetActive(true);
             devueltaACAsa = false;
         }
     }

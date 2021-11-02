@@ -671,7 +671,7 @@ MonoBehaviour:
   cabeza: {fileID: 2118646852}
   textoDialogo: {fileID: 1233004291}
   caraPer: {fileID: 21300000, guid: dcf876e008135c84798ef8e6a548e584, type: 3}
-  caraHer: {fileID: 21300000, guid: dcf876e008135c84798ef8e6a548e584, type: 3}
+  caraHer: {fileID: 21300000, guid: b62eb8a9322ea154bbf0026237dc8ed9, type: 3}
 --- !u!1001 &965575875
 PrefabInstance:
   m_ObjectHideFlags: 0
