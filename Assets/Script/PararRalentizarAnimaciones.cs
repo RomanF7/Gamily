@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimaciónÁcido : MonoBehaviour
+public class PararRalentizarAnimaciones : MonoBehaviour
 {
     private Animator animacion;
     [SerializeField] private float velocidad;
@@ -21,7 +21,7 @@ public class AnimaciónÁcido : MonoBehaviour
         else
         {
             //Verifica que velocidad tomará
-            if (Jeringas.habilidadJA == true)
+            if (Jeringas.habilidadMA == true)
             {
                 animacion.speed = (velocidad * 0.5f);
             }

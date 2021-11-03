@@ -6,32 +6,44 @@ public class BacteriaLiana : MonoBehaviour
     private Rigidbody2D fisica;
     [SerializeField]
     private float fuerza, tiempo;
+    private bool moviendoLiana, pararLiana;
 
     void Start()
     {
         fisica = GetComponent<Rigidbody2D>();
-        StartCoroutine(Movimiento());
     }
 
+    void Update()
+    {
+        //Debug.Log("Velocidad: " + fisica.velocity);
+        if (!Jeringas.pararTiempo && !moviendoLiana)
+        {
+            pararLiana = false;
+            StartCoroutine(Movimiento());
+        }
+        else if (Jeringas.pararTiempo && !pararLiana)
+        {
+            moviendoLiana = false;
+            StopCoroutine(Movimiento());
+            pararLiana = true;
+            fisica.bodyType = RigidbodyType2D.Static;
+        }
+
+    }
+
+    // esto no se toca; costó banda hacerlo funcionar c':
     IEnumerator Movimiento()
     {
+        moviendoLiana = true;
         Debug.Log("IEnumerator called.");
-        while (true)
+        fisica.bodyType = RigidbodyType2D.Dynamic;
+        while (moviendoLiana)
         {
-            if (!Jeringas.pararTiempo)
-            {
-                fisica.bodyType = RigidbodyType2D.Dynamic;
-                fisica.AddForce(new Vector3(fuerza, 0, 0));
-                yield return new WaitForSeconds(tiempo);
-                fisica.AddForce(new Vector3(-fuerza, 0, 0));
-                yield return new WaitForSeconds(tiempo);
-            }
-            else
-            {
-                Debug.Log(fisica.inertia);
-                fisica.bodyType = RigidbodyType2D.Static;
-                yield return new WaitForSeconds(3f);
-            }
+            fisica.bodyType = RigidbodyType2D.Dynamic;
+            fisica.AddForce(new Vector3(fuerza, 0, 0));
+            yield return new WaitForSeconds(tiempo);
+            fisica.AddForce(new Vector3(-fuerza, 0, 0));
+            yield return new WaitForSeconds(tiempo);
         }
     }
 }

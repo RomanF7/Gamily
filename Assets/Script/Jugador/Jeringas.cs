@@ -1,75 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Jeringas : MonoBehaviour
 {
-    public SpriteRenderer jeringaRojaHUD, jeringaAzulHUD;
+    public SpriteRenderer medicinaRojaHUD, medicinaAzulHUD;
     public static float velocidadNormal, habilidadLenta, habilidadRapida;
-    private float duracionJR, duracionJA, cronometroJR, cronometroJA;
-    public Sprite cooldownJR, cooldownJA, normalJR, normalJA;
-    public static bool habilidadJR, habilidadJA, pararTiempo;
+    private float duracionMR, duracionMA, cronometroMR, cronometroMA;
+    public Sprite cooldownMR, cooldownMA, normalMR, normalMA;
+    public static bool habilidadMR, habilidadMA, pararTiempo;
 
 
     private void Awake()
     {
-        
+
         //Setteo de varibles por defecto
         pararTiempo = false;
         //muerte = false;
         velocidadNormal = 2f;
-        cronometroJR = 0;
-        cronometroJA = 0;
-        duracionJR = 0;
-        duracionJA = 0;
+        cronometroMR = 0;
+        cronometroMA = 0;
+        duracionMR = 0;
+        duracionMA = 0;
 
         habilidadRapida = velocidadNormal * 3f;
     }
     private void Update()
     {
-        JeringaLogica();
+        MedicinaLogica();
     }
-    private void JeringaLogica()
+    private void MedicinaLogica()
     {
         //Dosis lento el entorno
-        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroJA)
+        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroMA)
         {
 
-            jeringaAzulHUD.sprite = cooldownJA;
-            cronometroJA = Time.unscaledTime + 3f;
-            duracionJA = Time.unscaledTime + 3f;
-            habilidadJA = true;
+            medicinaAzulHUD.sprite = cooldownMA;
+            cronometroMA = Time.unscaledTime + 5f;
+            duracionMA = Time.unscaledTime + 5f;
+            habilidadMA = true;
         }
 
-        if (Time.unscaledTime <= duracionJA && habilidadJA == true)
+        if (Time.unscaledTime <= duracionMA && habilidadMA == true)
         {
             habilidadLenta = velocidadNormal / 2f;
         }
-        else if (habilidadJA == true)
+        else if (habilidadMA == true)
         {
-            jeringaAzulHUD.sprite = normalJA;
-            habilidadJA = false;
+            medicinaAzulHUD.sprite = normalMA;
+            habilidadMA = false;
         }
 
         //Dosis velocidad
-        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroJR)
+        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroMR)
         {
 
-            jeringaRojaHUD.sprite = cooldownJR;
-            cronometroJR = Time.unscaledTime + 3f;
-            duracionJR = Time.unscaledTime + 3f;
-            habilidadJR = true;
+            medicinaRojaHUD.sprite = cooldownMR;
+            cronometroMR = Time.unscaledTime + 5f;
+            duracionMR = Time.unscaledTime + 5f;
+            habilidadMR = true;
         }
 
-        if (Time.unscaledTime > duracionJR && habilidadJR == true)
+        if (Time.unscaledTime > duracionMR && habilidadMR == true)
         {
-            jeringaRojaHUD.sprite = normalJR;
-            habilidadJR = false;
+            medicinaRojaHUD.sprite = normalMR;
+            habilidadMR = false;
         }
-        
+
         //Parar Tiempo
-        if (habilidadJA == true && habilidadJR == true)
+        if (habilidadMA == true && habilidadMR == true)
         {
             pararTiempo = true;
         }

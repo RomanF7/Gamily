@@ -23,7 +23,7 @@ public class MobHueso : MonoBehaviour
         else
         {
             //Verifica que velocidad tomará
-            if (Jeringas.habilidadJA == true)
+            if (Jeringas.habilidadMA == true)
             {
                 velocidad = (velAux * 0.5f);
             }

@@ -67,7 +67,7 @@ public class Jugador : MonoBehaviour
             // Ir a la derecha
             if (horizontal == 1)
             {
-                if (Jeringas.habilidadJR == true)
+                if (Jeringas.habilidadMR == true)
                 {
                     transform.Translate(Time.deltaTime * horizontal * Jeringas.habilidadRapida, 0f, 0f);
                 }
@@ -80,7 +80,7 @@ public class Jugador : MonoBehaviour
             }
             else if (horizontal == -1)
             {
-                if (Jeringas.habilidadJR == true)
+                if (Jeringas.habilidadMR == true)
                 {
                     transform.Translate(Time.deltaTime * horizontal * Jeringas.habilidadRapida, 0f, 0f);
                 }
