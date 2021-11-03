@@ -89,7 +89,6 @@
     <Compile Include="Assets\Script\Menus\Menu opciones\MenuOpciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\Script\MovimientoLianaBacteria.cs" />
     <Compile Include="Assets\ControlAudio.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\GuardarCargarDatos.cs" />
@@ -124,6 +123,7 @@
     <Compile Include="Assets\Script\NPC\Policia\PoliciaLogica.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\TextoCréditos.cs" />
+    <Compile Include="Assets\Script\Enemigo\LogicaVirus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

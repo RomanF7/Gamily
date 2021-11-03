@@ -13,6 +13,7 @@ TagManager:
   - Izquierda
   - Folleto
   - RecuerdoPlata
+  - Enemigo
   layers:
   - Default
   - TransparentFX
