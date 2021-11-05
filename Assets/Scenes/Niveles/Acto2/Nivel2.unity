@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419796028850294492, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.01
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4419796028850294492, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1914,9 +1914,10 @@ GameObject:
   - component: {fileID: 1051260239}
   - component: {fileID: 1051260238}
   - component: {fileID: 1051260237}
+  - component: {fileID: 1051260240}
   m_Layer: 0
   m_Name: "transici\xF3n_nv3"
-  m_TagString: Untagged
+  m_TagString: TransicionAlNv3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1931,10 +1932,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.75}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1945,7 +1946,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 0.5}
+  m_Size: {x: 6, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1051260238
 SpriteRenderer:
@@ -2012,6 +2013,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051260240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051260236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952139144cbeec74589b80d054049f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efectoTransicion: {fileID: 1216765231}
 --- !u!1001 &1075992423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,6 +2373,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18, y: 0.5}
   m_EdgeRadius: 0
+--- !u!1 &1216765231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423449085101188497, guid: 83d5eb1107b29314bb0b58788fc1cb51, type: 3}
+  m_PrefabInstance: {fileID: 1075992423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1251940219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7154,7 +7173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705636250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75, y: -2, z: 0}
+  m_LocalPosition: {x: 75, y: -2, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -239,10 +239,14 @@
 65(...great, doubt I
 65have a use for this.)
 66I'd better get going.
+67(You got the 
+67Medicine B.
+67Now you can use G to
+67slow down time.)
 68"     CONTROLS
 68 F - Makes you faster.
 68 G - Slows time.
-68 F+G - Stops Time."
+68 F+G - Stops time."
 69"With a joystick, use
 69 X or Y."
 70(A what-stick?)

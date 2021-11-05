@@ -62,6 +62,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Script\Dialogos\DialogoLabMed.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\Script\Dialogos\DialogosNivel2.cs" />
     <Compile Include="Assets\Script\MovimientoPasto.cs" />
     <Compile Include="Assets\LogicaTransicion.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -132,7 +133,7 @@
     <Compile Include="Assets\Script\NPC\Policia\DialogoNive1Noche.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\TextoCréditos.cs" />
-    <Compile Include="Assets\Script\Dialogos\DialogosNivel2.cs" />
+    <Compile Include="Assets\Script\TransicionAlNivel3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -18,6 +18,7 @@ TagManager:
   - Enemigo
   - ComienzoNv2
   - FinalNv2
+  - TransicionAlNv3
   layers:
   - Default
   - TransparentFX

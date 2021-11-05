@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class EntrarLab : MonoBehaviour
+public class TransicionAlNivel3 : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject efectoTransicion;
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !DialogoNivel1.deVueltaACasa)
+        if (collision.gameObject.tag == "Player")
         {
             efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
         }
     }
-
 }
