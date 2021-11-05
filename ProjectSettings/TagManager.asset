@@ -15,6 +15,9 @@ TagManager:
   - RecuerdoPlata
   - AntesDelPuente
   - DespuesDelPuente
+  - Enemigo
+  - ComienzoNv2
+  - FinalNv2
   layers:
   - Default
   - TransparentFX

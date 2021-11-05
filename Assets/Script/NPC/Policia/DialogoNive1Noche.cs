@@ -11,8 +11,6 @@ public class DialogoNive1Noche : MonoBehaviour
     [SerializeField]
     private Image cabeza;
     [SerializeField]
-    private Sprite caraPer, caraPoli;
-    [SerializeField]
     private TMP_Text textoDialogo;
     [SerializeField]
     private GameObject transicionNivel;
