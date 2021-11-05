@@ -25,21 +25,12 @@ public class DialogoPorDefecto : MonoBehaviour
         string aux = "";
         if (index.Length == 1)
             index = "0" + index;
-        if (LenguajesOpciones.enIngles && text.enabled == true)
+        if (!LenguajesOpciones.enIngles && text.enabled == true)
         {
             for (int i = 0; i < oracionING.Length; i++)
             {
                 aux = "";
                 char[] letras = oracionING[i].ToCharArray();
-                /*  for (int h = 0; h < letras.Length; h++)
-                {
-                    if (char.IsDigit(letras[h]))
-                    {
-                        aux = aux + letras[h];
-                    }
-                }   */
-                // no sé qué hace este código, lo cambié por el otro
-                // att. igna c:
 
                 if (char.IsDigit(letras[0]) && char.IsDigit(letras[1]))
                 {
@@ -58,7 +49,7 @@ public class DialogoPorDefecto : MonoBehaviour
             }
             text.SetText(parrafo);
         }
-        else if (LenguajesOpciones.enIngles == false && text.enabled == true)
+        else if (LenguajesOpciones.enIngles && text.enabled == true)
         {
 
             for (int i = 0; i < oracionESP.Length; i++)

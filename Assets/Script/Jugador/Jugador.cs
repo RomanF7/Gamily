@@ -14,6 +14,7 @@ public class Jugador : MonoBehaviour
     // Variables privadas
     private Rigidbody2D rigidbody;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private float horizontal, vertical;
     private int contador;
     private bool estaEnElPiso;
@@ -27,6 +28,7 @@ public class Jugador : MonoBehaviour
         estaEnElPiso = false;
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update
@@ -48,14 +50,6 @@ public class Jugador : MonoBehaviour
 
         // Movimiento
         MapeadoDeTeclaSinFisicas();
-
-        // Reinicio de nivel por caída
-        if (transform.position.y < -7)
-        {
-            /*  [insertar sprite de game over]; no sé parar el movimiento
-                del personaje, pero por ahí viene la cosa. -igna */
-            morido = true;
-        }
     }
 
     // FixedUpdate (Física)
@@ -138,18 +132,21 @@ public class Jugador : MonoBehaviour
     // (Se reinicia el nivel)
     private void Reiniciar()
     {
+        
         // parar música
-        MenuPausa.enPausa = true;
-        if (!canvasGameOver.isActiveAndEnabled)
+        if (!canvasGameOver.isActiveAndEnabled && morido)
         {
+            Debug.Log("Reiniciado");
+            MenuPausa.enPausa = true;
+            spriteRenderer.enabled = false;
             canvasGameOver.enabled = true;
         }        
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            MenuPausa.enPausa = false;
             morido = false;
+            MenuPausa.enPausa = false;
             canvasGameOver.enabled = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
     }

@@ -24,11 +24,12 @@ public class LogicaFondo : MonoBehaviour
         Vector3 desplazamiento = camaraTransform.position - posAnteriorCamara;
         transform.position += desplazamiento * multiplicadorParallax;
         posAnteriorCamara = camaraTransform.position;
+        /* código bug código bug código bug código bug-
         if(Mathf.Abs(camaraTransform.position.x - transform.position.x) >= unidadDeTextura)
         {
             float offset = (camaraTransform.position.x - transform.position.x) % unidadDeTextura;
-            // soy un boludo. -igna
             transform.position = new Vector3(camaraTransform.position.x + offset, transform.position.y, transform.position.z);
         }
+        */
     }
 }

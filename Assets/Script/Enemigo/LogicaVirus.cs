@@ -5,12 +5,14 @@ public class LogicaVirus : MonoBehaviour
     [SerializeField]
     private float velAux;
     private float velocidadTiempo, velocidad;
-    public Transform PosIzq, PosDer;
+    public Transform PuntoA, PuntoB;
     private Transform objetivo;
 
-    void Start()
+    void Awake()
     {
-        objetivo = PosDer;
+        PuntoA.position = new Vector3(PuntoA.position.x, PuntoA.position.y, transform.position.z);
+        PuntoB.position = new Vector3(PuntoB.position.x, PuntoB.position.y, transform.position.z);
+        objetivo = PuntoB;
     }
 
     void Update()
@@ -33,15 +35,15 @@ public class LogicaVirus : MonoBehaviour
             }
         }
 
-        if (transform.position.x == PosDer.position.x)
+        if (transform.position == PuntoB.position)
         {
-            objetivo = PosIzq;
+            objetivo = PuntoA;
         }
-        else if (transform.position.x == PosIzq.position.x)
+        else if (transform.position == PuntoA.position)
         {
-            objetivo = PosDer;
+            objetivo = PuntoB;
         }
         velocidadTiempo = velocidad * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(objetivo.position.x, transform.position.y, transform.position.z), velocidadTiempo);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(objetivo.position.x, objetivo.position.y, transform.position.z), velocidadTiempo);
     }
 }

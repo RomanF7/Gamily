@@ -35,7 +35,6 @@ public class BacteriaLiana : MonoBehaviour
     IEnumerator Movimiento()
     {
         moviendoLiana = true;
-        Debug.Log("IEnumerator called.");
         fisica.bodyType = RigidbodyType2D.Dynamic;
         while (moviendoLiana)
         {
