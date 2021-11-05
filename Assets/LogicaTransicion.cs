@@ -15,9 +15,9 @@ public class LogicaTransicion : MonoBehaviour
         {
             SceneManager.LoadScene("Casa2");
         }
-        else if (Doctor.visitaAlDoctor == true)
+        else if (Doctor.visitaAlDoctor == true && SceneManager.GetActiveScene().name == "Casa2")
         {
-            SceneManager.LoadScene("Nivel1 (Noche)");
+            SceneManager.LoadScene("CasaInicioNv2");
         }
 
         if (EntrarLab.tocandoLab == true && SceneManager.GetActiveScene().name == "Nivel1")

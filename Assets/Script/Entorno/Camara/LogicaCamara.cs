@@ -5,6 +5,16 @@ using UnityEngine.UI;
 
 public class LogicaCamara : MonoBehaviour
 {
+    /*
+
+    ****************************************************************************
+    ****************************************************************************
+    **ACLARACÓN TODA PARTE LÓGICA COMENTADA SE ESPERA QUE SE USE EN UN FUTURO.**
+    ****************************************************************************
+    ****************************************************************************
+
+    */
+
     //Variables publicas
     public Transform transformPer, transformIzq, transformDer, auxiliarDistanciaIzquierda, auxiliarDistanciaDerecha;
     public Vector3 posCamara;
@@ -20,9 +30,15 @@ public class LogicaCamara : MonoBehaviour
     {
         audioSource.volume = ControlAudio.volumen;
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+    }
 
     private void LateUpdate()
     {
+        //Debug.Log("Distancia: " + Vector2.Distance(transformPer.position, transformDer.position));
         if (Vector2.Distance(auxiliarDistanciaIzquierda.position, transformIzq.position) > 0.6f && Vector2.Distance(auxiliarDistanciaDerecha.position,transformDer.position) > 0.8f)
         {
             posCamara.x = transformPer.position.x;
@@ -33,5 +49,7 @@ public class LogicaCamara : MonoBehaviour
             posCamara.x = transformPer.position.x;
             transform.position = posCamara;
         }
+
+        
     }
 }

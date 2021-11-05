@@ -188,7 +188,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &33238097
@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 7686966751630305193, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c97d8bd52b0293445a161eed3c2c8f49, type: 3}
+      objectReference: {fileID: 21300000, guid: e94278d70ea1c064284096ef92f44262, type: 3}
     - target: {fileID: 7686966751828489662, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_Name
       value: Dialogo
@@ -250,11 +250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_RootOrder
@@ -262,27 +262,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1059.36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -314,11 +314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846842, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -333,9 +333,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7686966752657846843, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1203050753}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
 --- !u!223 &507867714 stripped
@@ -461,8 +461,8 @@ MonoBehaviour:
   movimiento: -1.5
   canvasDialogo: {fileID: 995882276}
   textoDialogo: {fileID: 986849397}
-  caraPer: {fileID: 21300000, guid: dcf876e008135c84798ef8e6a548e584, type: 3}
-  caraMad: {fileID: 21300000, guid: c97d8bd52b0293445a161eed3c2c8f49, type: 3}
+  caraPer: {fileID: 21300000, guid: 01cf497da8d0f4c48ac872ebe4414440, type: 3}
+  caraMad: {fileID: 21300000, guid: e94278d70ea1c064284096ef92f44262, type: 3}
   cabeza: {fileID: 906777097}
   axel: {fileID: 1878922672}
 --- !u!1 &541280504
@@ -544,7 +544,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &793670616
@@ -736,6 +736,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 218d6cabcdfc97e49871b82fecb91579, type: 3}
     - target: {fileID: 3836210590330319613, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3836210590330319613, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: cooldownJA
       value: 
       objectReference: {fileID: 21300000, guid: 09cd6307be3f91c43a45604db3ac0d24, type: 3}
@@ -751,6 +755,10 @@ PrefabInstance:
       propertyPath: jeringaRojaHUD
       value: 
       objectReference: {fileID: 33238096}
+    - target: {fileID: 3836210590330319613, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
+      propertyPath: animacionMedRoja
+      value: 
+      objectReference: {fileID: 1559940997}
     - target: {fileID: 4419796028850294482, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: m_Name
       value: Axel
@@ -835,7 +843,8 @@ PrefabInstance:
       propertyPath: canvasMenuPausa
       value: 
       objectReference: {fileID: 1160345304}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3836210590330319613, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
 --- !u!114 &986849397 stripped
 MonoBehaviour:
@@ -1509,6 +1518,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1559940997 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4419796028850294488, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
+  m_PrefabInstance: {fileID: 965575875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623567598
 GameObject:
   m_ObjectHideFlags: 0

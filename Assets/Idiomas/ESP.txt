@@ -70,7 +70,7 @@
 17él se hará responsable
 17de todo lo que él me
 17pruebe, ¿qué podría
-17salir mal?)
+17salir mal?
 18Bien, si quieres,
 18puedes comenzar ahora,
 18con esta medicina. Es
@@ -136,3 +136,208 @@
 34raro. A lo mejor le
 34pregunto al doctor
 34mañana).
+35Bueno, son las 10.
+35El laboratorio ya debe
+35de estar abierto,
+35supongo.
+36(Será mejor ir a ver
+36al doctor, y ya le
+36pregunto lo que le
+36pasa a mi hermano).
+37Hmm... Esos síntomas
+37sí que son curiosos.
+37
+37Es que me suenan de
+37algo...
+37...ah!
+38Bueno, te diría que
+38no te preocupes,
+38pero esta enfermedad
+38es algo nuevo.
+39Dudo que a tu hermano
+39le pase algo, pero
+39será mejor contener la
+39enfermedad, o será
+39será peligrosa para
+39otras personas.
+40Recuerdo tener una
+40cura en preparación,
+40he visto esto hace muy
+40poco después de todo.
+41Oh.
+41(Aún me preocupa esto.
+41¿Tal vez sea mejor si
+41trato de ayudar y
+41probar la cura?)
+42...La cura no está
+42probada, de todos
+42modos, y aún puede
+42tomar meses que sea
+42apta para eso--
+43Oh... Bueno, pero si
+43está en pruebas,
+43imagino que debe estar
+43aquí almacenada, ¿no?
+44Eh, sí...
+44
+44...¡Eh, pero no está
+44probado que--
+45Ah-pues-que-bien-
+45¡gracias!
+46...sea segura.
+46
+46En fin... Esto no
+46puede terminar bien...
+47...Hmm. No siento nada
+47diferente, como la
+47otra medicina.
+48Tal vez no le haya
+48dado... tiempo...
+49...ugh, ¿en dónde
+49estoy?
+50Y, ¿qué es todo eso?
+51Oye, ¿qué-
+52Antes que preguntes,
+52estás dentro de tu
+52propio sistema.
+53Oh.
+53
+53...¿eh?
+54Puede sonar confuso,
+54pero parece ser efecto
+54de la medicina. Te
+54dije que no la había
+54probado.
+55¿Eso me transportó
+55hasta aquí? No le
+55quita lo extraño...
+56Ahora, puede que hayan
+56criaturas aquí que te
+56ataquen. Aún así, no
+56debes dañarlas, son
+56parte de tu sistema.
+57Sólo que no te
+57reconocen, claro está.
+57Será mejor que las
+57evites.
+58Bueno, eso no es muy
+58conviniente. Sólo
+58quiero volver a casa--
+59Ya, sigue adelante.
+59Tal vez encuentres la
+59salida.
+60Si usas las medicinas,
+60podrás hacer el tiempo
+60más lento o incluso
+60pararlo.
+61(¿Así que la azul hace
+61más lento el tiempo?)
+61
+61(Seguro para el tiempo
+61si uso ambas a la
+61vez...)
+62Ah, y toma esto.
+63¿Un jabón?
+64Pensé que traería algo
+64para poder ayudarte.
+65(...)
+65(Falta que me diga que
+65me sirve de ser
+65antibacterial...)
+66(Creo que será mejor
+66que me vaya).
+67(Ahora puedes utilizar
+67la Medicina B para
+67ralentizar el tiempo
+67con "G").
+68"     CONTROLES
+68 F - ir más rápido.
+68 G - tiempo más lento.
+68 F+G - parar tiempo."
+69"Con un joystick, usa
+69 X e Y."
+70(...¿un qué?)
+71¿Cómo ha llegado hasta
+71aquí tán rápido?
+72Menos preguntas y más
+72acción. Acabo de
+72localizar la salida,
+72parece que solo debes
+72bajar por aquí.
+73Pero puede que te
+73encuentres con una
+73amenaza mayor, algo
+73que no es parte de tí.
+74Oh.
+74
+74Pues voy en camino,
+74igual.
+75Qué entusiasmo...
+76...Oh, oh. Tengo el
+76presentimiento de que
+76esto, sea lo que sea,
+76no me va a ser muy
+76amistoso...
+77...No...le encuentro..
+77...el sentido....
+77
+77¿Qué tengo que hacer
+77para vencerle?
+78(...)
+78(Solo tengo un jabón).
+78(...un momento. No, no
+78puede ser...A menos
+78que...)
+79...Bueno, eso casi que
+79funciona.
+80La caja dice...
+80"Mata al 99,9% de las
+80bacterias".
+80Esto tiene que ser una
+80broma.
+81De todas formas, esto
+81hasta lo podría pisar.
+81No es molestia...
+82(!!)
+82(¿Qué está pasando?
+83Eh, tú. Al fin has
+83despertado.
+84Uf... ¿Qué acaba de
+84pasar?
+85Resulta que tomaste
+85una de las medicinas
+85en pruebas, y de ahí
+85quedaste inconsciente.
+85Pero, gracias a eso,
+85he logrado avances.
+86¿Qué quiere decir?
+87He podido desarrollar
+87una cura, estudiando
+87lo que te pasó.
+88Aunque si tanto
+88querías acelerar el
+88proceso de prueba,
+88habermelo dicho y--
+89N-no, gracias.
+90En fin, avisé a tu
+90familia sobre tu
+90situación.
+91¡Y nos ha dado dinero
+91por las pruebas!
+92¡¿E-en serio?!
+93Oh, es que lo más
+93importante que te iba
+93a encargar era probar
+93esa medicina. Gracias.
+94Ya veo. (Haberlo
+94dicho antes)...
+95Y bien, todo eso que
+95hice con las bacterias
+95y eso, ¿qué?
+96..No sé de que hablas.
+97(Habrá sido un sueño).
+97(Para qué me
+97esfuerzo...
+98Bueno, al menos hemos
+98logrado lo que
+98necesitábamos.

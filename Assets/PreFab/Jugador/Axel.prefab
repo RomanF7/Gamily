@@ -153,12 +153,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4419796028850294482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d2d8284960d6a24e8b3ee883cc4a78d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0203669bcfec5184983f988cec7c0b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorAPasar: {fileID: 0}
-  salto: 0
+  jugadorAPasar: {fileID: 4419796028850294482}
+  salto: 280
   canvasMenuPausa: {fileID: 0}
+  canvasGameOver: {fileID: 0}
 --- !u!114 &3836210590330319613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,12 +172,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8047fa9292f54fb10dc376530deb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jeringaRojaHUD: {fileID: 0}
-  jeringaAzulHUD: {fileID: 0}
-  cooldownJR: {fileID: 0}
-  cooldownJA: {fileID: 0}
-  normalJR: {fileID: 0}
-  normalJA: {fileID: 0}
+  medicinaRojaHUD: {fileID: 0}
+  medicinaAzulHUD: {fileID: 0}
+  noDisponibleMedRoja: {fileID: 3758702358110733925, guid: 664f96fa042f17a4289eb3bbad526c86, type: 3}
+  noDisponibleMedAzul: {fileID: 5854935770825735803, guid: 89c638ae36675874ba4a9eae08be645d, type: 3}
+  normalMR: {fileID: -4928772120400617224, guid: 664f96fa042f17a4289eb3bbad526c86, type: 3}
+  normalMA: {fileID: -828485195412680957, guid: 89c638ae36675874ba4a9eae08be645d, type: 3}
+  animacionMedRoja: {fileID: 0}
+  animacionMedAzul: {fileID: 0}
 --- !u!114 &2668326048030357624
 MonoBehaviour:
   m_ObjectHideFlags: 0

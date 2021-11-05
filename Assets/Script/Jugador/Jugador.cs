@@ -3,32 +3,43 @@ using UnityEngine.SceneManagement;
 
 public class Jugador : MonoBehaviour
 {
-    [SerializeField]
+
     public static GameObject jugador;
+    public GameObject jugadorAPasar;
     // Variables publicas
+    public static float velocidad;
     public float salto;
-    public Canvas canvasMenuPausa;
+    public Canvas canvasMenuPausa, canvasGameOver;
+    public static bool gameOver;
 
     // Variables privadas
     private Rigidbody2D rigidbody;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private float horizontal, vertical;
     private int contador;
     private bool estaEnElPiso;
 
 
 
-    // Start
-    private void Start()
+    // Awake
+    private void Awake()
     {
+        velocidad = 2f;
+        jugador = jugadorAPasar;
         estaEnElPiso = false;
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update
     private void Update()
     {
+        // Detectar Game Over
+        if (gameOver)
+            Reiniciar();
+
         // Tomar ejes
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
@@ -41,14 +52,6 @@ public class Jugador : MonoBehaviour
 
         // Movimiento
         MapeadoDeTeclaSinFisicas();
-
-        // Reinicio de nivel por caída
-        if (transform.position.y < -7)
-        {
-            /*  [insertar sprite de game over]; no sé parar el movimiento
-                del personaje, pero por ahí viene la cosa. -igna */
-            Reiniciar();
-        }
     }
 
     // FixedUpdate (Física)
@@ -65,26 +68,26 @@ public class Jugador : MonoBehaviour
             // Ir a la derecha
             if (horizontal == 1)
             {
-                if (Jeringas.habilidadJR == true)
+                if (Jeringas.habilidadMR == true)
                 {
                     transform.Translate(Time.deltaTime * horizontal * Jeringas.habilidadRapida, 0f, 0f);
                 }
                 else
                 {
-                    transform.Translate(Time.deltaTime * horizontal * Jeringas.velocidadNormal, 0f, 0f);
+                    transform.Translate(Time.deltaTime * horizontal * velocidad, 0f, 0f);
                 }
                 animator.SetBool("Correr", true);
                 // Ir a la izquierda
             }
             else if (horizontal == -1)
             {
-                if (Jeringas.habilidadJR == true)
+                if (Jeringas.habilidadMR == true)
                 {
                     transform.Translate(Time.deltaTime * horizontal * Jeringas.habilidadRapida, 0f, 0f);
                 }
                 else
                 {
-                    transform.Translate(Time.deltaTime * horizontal * Jeringas.velocidadNormal, 0f, 0f);
+                    transform.Translate(Time.deltaTime * horizontal * velocidad, 0f, 0f);
                 }
                 animator.SetBool("Correr", true);
                 // Sin hacer nada
@@ -92,16 +95,6 @@ public class Jugador : MonoBehaviour
             else if (horizontal == 0)
             {
                 animator.SetBool("Correr", false);
-            }
-
-            // Reinicio de "Nivel1"
-            if (Input.GetKey(KeyCode.R))
-            {
-                contador++;
-                if (contador >= 180)
-                {
-                    Reiniciar();
-                }
             }
 
             // Pausar
@@ -141,7 +134,23 @@ public class Jugador : MonoBehaviour
     // (Se reinicia el nivel)
     private void Reiniciar()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+        // parar música
+        if (!canvasGameOver.isActiveAndEnabled && gameOver)
+        {
+            Debug.Log("Reiniciado");
+            MenuPausa.enPausa = true;
+            spriteRenderer.enabled = false;
+            canvasGameOver.enabled = true;
+        }        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameOver = false;
+            MenuPausa.enPausa = false;
+            canvasGameOver.enabled = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 
     private void Rotar()
@@ -187,9 +196,9 @@ public class Jugador : MonoBehaviour
         }
 
         // Dectectar colision con pinchos
-        if (collision.gameObject.tag == "Pincho")
+        if (collision.gameObject.tag == "Enemigo")
         {
-            // muerte = true;
+            gameOver = true;
         }
     }
 

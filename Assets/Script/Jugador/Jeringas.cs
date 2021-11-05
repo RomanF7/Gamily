@@ -1,76 +1,89 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Jeringas : MonoBehaviour
 {
-    public SpriteRenderer jeringaRojaHUD, jeringaAzulHUD;
-    public static float velocidadNormal, habilidadLenta, habilidadRapida;
-    private float duracionJR, duracionJA, cronometroJR, cronometroJA;
-    public Sprite cooldownJR, cooldownJA, normalJR, normalJA;
-    public static bool habilidadJR, habilidadJA, pararTiempo;
-
-
+    public SpriteRenderer medicinaRojaHUD, medicinaAzulHUD;
+    public static float habilidadLenta, habilidadRapida;
+    private float duracionMR, duracionMA, cronometroMR, cronometroMA, cooldownMR, cooldownMA;
+    public Sprite noDisponibleMedRoja, noDisponibleMedAzul, normalMR, normalMA;
+    public Animator animacionMedRoja, animacionMedAzul;
+    public static bool habilidadMR, habilidadMA, pararTiempo;
+    
     private void Awake()
     {
-        
+
         //Setteo de varibles por defecto
         pararTiempo = false;
-        //muerte = false;
-        velocidadNormal = 2f;
-        cronometroJR = 0;
-        cronometroJA = 0;
-        duracionJR = 0;
-        duracionJA = 0;
 
-        habilidadRapida = velocidadNormal * 3f;
+        cronometroMR = 0;
+        cronometroMA = 0;
+        
+        duracionMR = 0;
+        duracionMA = 0;
+
+        animacionMedRoja.speed = 0.23f;
+        animacionMedAzul.speed = 0.23f;
+
+        animacionMedRoja.enabled = false;
+        animacionMedAzul.enabled = false;
+
+        // debería ser tomado del jugador, realmente, pero imposible
+        habilidadRapida = 2f * 3f;
     }
     private void Update()
     {
-        JeringaLogica();
-    }
-    private void JeringaLogica()
-    {
-        //Dosis lento el entorno
-        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroJA)
+        // Ralentizar entorno
+        if (Input.GetKeyDown(KeyCode.G) && Time.unscaledTime >= cronometroMA)
         {
 
-            jeringaAzulHUD.sprite = cooldownJA;
-            cronometroJA = Time.unscaledTime + 3f;
-            duracionJA = Time.unscaledTime + 3f;
-            habilidadJA = true;
+            medicinaAzulHUD.sprite = noDisponibleMedAzul;
+            cronometroMA = Time.unscaledTime + 10f;
+            duracionMA = Time.unscaledTime + 5f;
+            habilidadMA = true;
         }
 
-        if (Time.unscaledTime <= duracionJA && habilidadJA == true)
+        if (Time.unscaledTime <= duracionMA && habilidadMA == true)
         {
-            habilidadLenta = velocidadNormal / 2f;
+            habilidadLenta = Jugador.velocidad / 2f;
         }
-        else if (habilidadJA == true)
+        else if (habilidadMA == true)
         {
-            jeringaAzulHUD.sprite = normalJA;
-            habilidadJA = false;
+            habilidadMA = false;
+            animacionMedAzul.Rebind();
+            animacionMedAzul.enabled = true;
         }
-
-        //Dosis velocidad
-        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroJR)
+        else if (Time.unscaledTime >= cronometroMA && medicinaAzulHUD.sprite != normalMA)
         {
-
-            jeringaRojaHUD.sprite = cooldownJR;
-            cronometroJR = Time.unscaledTime + 3f;
-            duracionJR = Time.unscaledTime + 3f;
-            habilidadJR = true;
+            animacionMedAzul.enabled = false;
+            medicinaAzulHUD.sprite = normalMA;
         }
 
-        if (Time.unscaledTime > duracionJR && habilidadJR == true)
+        // Hacer más rápido al jugador
+        if (Input.GetKeyDown(KeyCode.F) && Time.unscaledTime >= cronometroMR)
         {
-            jeringaRojaHUD.sprite = normalJR;
-            habilidadJR = false;
+            medicinaRojaHUD.sprite = noDisponibleMedRoja;
+            cronometroMR = Time.unscaledTime + 10f;
+            duracionMR = Time.unscaledTime + 5f;
+            habilidadMR = true;
         }
-        
-        //Parar Tiempo
-        if (habilidadJA == true && habilidadJR == true)
+
+        if (Time.unscaledTime > duracionMR && habilidadMR == true)
         {
+            habilidadMR = false;
+            animacionMedRoja.Rebind();
+            animacionMedRoja.enabled = true;
+        }
+        else if (Time.unscaledTime >= cronometroMR && medicinaRojaHUD.sprite != normalMR)
+        {
+            animacionMedRoja.enabled = false;
+            medicinaRojaHUD.sprite = normalMR;
+        }
+
+
+        // Parar el tiempo
+        if (habilidadMA == true && habilidadMR == true)
+        {
+
             pararTiempo = true;
         }
         else
@@ -79,3 +92,25 @@ public class Jeringas : MonoBehaviour
         }
     }
 }
+
+/*
+public class Jeringas : MonoBehaviour
+{
+    public SpriteRenderer medicinaRojaHUD, medicinaAzulHUD;
+    public static float velocidadNormal, habilidadRapida, multiplicadorLenta;
+    private float duracionMR, duracionMA, cronometroMR, cronometroMA;
+    public Sprite cooldownMR, cooldownMA, normalMR, normalMA;
+    public static bool habilidadMR, habilidadMA, pararTiempo;
+
+    void Awake()
+    {
+        // Definición de variables
+        multiplicadorLenta = 0.5f;
+
+    }
+
+    void Update()
+    {
+        
+    }
+}*/

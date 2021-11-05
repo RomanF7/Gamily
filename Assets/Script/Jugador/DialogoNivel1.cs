@@ -15,7 +15,8 @@ public class DialogoNivel1 : MonoBehaviour
     private Sprite folletoESP, folletoING;
     [SerializeField]
     private SpriteRenderer folletoImg;
-    private bool devueltaACAsa, mostrarFolleto, recordatorioPlata;
+    public static bool deVueltaACasa;
+    private bool mostrarFolleto, recordatorioPlata;
     private int click = 7;
 
     private void Awake()
@@ -31,13 +32,14 @@ public class DialogoNivel1 : MonoBehaviour
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             dialogo.enabled = true;
             MenuPausa.enPausa = true;
-            devueltaACAsa = true;
+            deVueltaACasa = true;
             recordatorioPlata = true;
         }
 
         if (collision.gameObject.tag == "Folleto" && click == 9)
         {
-           // efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
+            // efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
+            deVueltaACasa = false;
             dialogo.transform.position = new Vector3(47.64f, 2, 0);
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             MenuPausa.enPausa = true;
@@ -87,10 +89,9 @@ public class DialogoNivel1 : MonoBehaviour
                 dialogo.enabled = false;
                 break;
         }
-        if (Vector2.Distance(transform.position, GBFolleto.transform.position) < 4 && devueltaACAsa == true)
+        if (Vector2.Distance(transform.position, GBFolleto.transform.position) < 4 && deVueltaACasa == true)
         {
             GBFolleto.SetActive(true);
-            devueltaACAsa = false;
         }
     }
 }

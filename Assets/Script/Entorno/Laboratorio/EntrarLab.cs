@@ -11,7 +11,7 @@ public class EntrarLab : MonoBehaviour
     private GameObject efectoTransicion;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !DialogoNivel1.deVueltaACasa)
         {
             tocandoLab = true;
             efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
