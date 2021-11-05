@@ -153,13 +153,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4419796028850294482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0203669bcfec5184983f988cec7c0b80, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d2d8284960d6a24e8b3ee883cc4a78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorAPasar: {fileID: 4419796028850294482}
-  salto: 280
+  jugadorAPasar: {fileID: 0}
+  salto: 0
   canvasMenuPausa: {fileID: 0}
-  menuPausa: {fileID: 0}
 --- !u!114 &3836210590330319613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,4 +189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f2c41e3d23475468f6bfe3675a2e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorGameObject: {fileID: 0}
+  jeringaRojaHUD: {fileID: 0}

@@ -23,7 +23,6 @@ public class LogicaCamara : MonoBehaviour
 
     private void LateUpdate()
     {
-        //Debug.Log("Distancia: " + Vector2.Distance(transformPer.position, transformDer.position));
         if (Vector2.Distance(auxiliarDistanciaIzquierda.position, transformIzq.position) > 0.6f && Vector2.Distance(auxiliarDistanciaDerecha.position,transformDer.position) > 0.8f)
         {
             posCamara.x = transformPer.position.x;
@@ -34,7 +33,5 @@ public class LogicaCamara : MonoBehaviour
             posCamara.x = transformPer.position.x;
             transform.position = posCamara;
         }
-
-        
     }
 }

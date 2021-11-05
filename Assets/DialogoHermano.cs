@@ -8,13 +8,15 @@ public class DialogoHermano : MonoBehaviour
 {
 
     [SerializeField]
-    private Canvas canvasDialogo;
+    private Canvas canvasDialogo, canvasTransicionTexto;
     [SerializeField]
     private Image cabeza;
     [SerializeField]
     private TMP_Text textoDialogo;
     [SerializeField]
     private Sprite caraPer, caraHer;
+    [SerializeField]
+    private GameObject efectoTransicion;
 
     private int click = 31;
 
@@ -50,6 +52,11 @@ public class DialogoHermano : MonoBehaviour
             case 34:
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
                 cabeza.sprite = caraPer;
+                break;
+            case 35:
+                canvasDialogo.enabled = false;
+                efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
+                canvasTransicionTexto.enabled = true;
                 break;
         }
     }

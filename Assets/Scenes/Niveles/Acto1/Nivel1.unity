@@ -4573,6 +4573,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4419796028850294495, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
+      propertyPath: salto
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419796028850294495, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: normalJA
       value: 
       objectReference: {fileID: 21300000, guid: 1c55b189312954744a35a125770314e2, type: 3}
@@ -4735,7 +4739,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 7686966752657846843, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 430291aacd0547c46969a9c9900fbdc4, type: 3}

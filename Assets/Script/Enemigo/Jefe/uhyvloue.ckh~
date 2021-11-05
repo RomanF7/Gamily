@@ -1,0 +1,71 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Jefe : MonoBehaviour
+{
+    [Header("Jugador")]
+    [Tooltip("Los ojos segiran al objetivo")]
+    [SerializeField]
+    private Transform transformJugador;
+
+
+    [Header("Jefe")]
+    [SerializeField]
+    private Transform ojo1, ojo2;
+    [SerializeField]
+    private Transform rayoGrande1, rayoGrande2;
+    [SerializeField]
+    private Animator animatorColumna;
+    [SerializeField]
+    private PlayerPrefs prefabColumna;
+    private bool ataque3, ataque2, ataque1;
+    private Vector2 diferencia;
+
+
+    private void Update()
+    {
+        Ataque3();
+        Ataque2();
+    }
+
+
+    private void Ataque3()
+    {
+        if (ataque3)
+        {
+            diferencia = transformJugador.position - transform.position;
+            var aux = Vector2.Angle(diferencia, transform.position);
+            var aux2 = Vector2.Angle(new Vector2(transformJugador.position.x - transform.position.x, -transformJugador.position.y), transform.position);
+            if (aux > 100)
+            {
+                ojo1.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux, 90, 180));
+                ojo1.transform.localScale = new Vector3(-1, -1, 1);
+                ojo2.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux, 90, 180));
+                ojo2.transform.localScale = new Vector3(1, -1, 1);
+
+                rayoGrande1.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux2, 90, 180) + 90);
+                rayoGrande2.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux2, 90, 180) + 90);
+
+            }
+            else
+            {
+                ojo1.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux, 90, 180));
+                ojo1.transform.localScale = new Vector3(1, 1, 1);
+                ojo2.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux, 90, 180));
+                ojo2.transform.localScale = new Vector3(1, 1, 1);
+
+                rayoGrande1.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux2, 90, 180) - 90);
+                rayoGrande2.transform.eulerAngles = new Vector3(0, 0, -Mathf.Clamp(aux2, 90, 180) - 90);
+            }
+        }
+    }
+
+    private void Ataque2()
+    {
+        if (ataque2)
+        {
+            Instantiate(prefabColumna)
+        }
+    }
+}
