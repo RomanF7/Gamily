@@ -8,12 +8,19 @@ public class DialogosNivel2 : MonoBehaviour
     private TMP_Text textoDialogo;
     [SerializeField]
     private Canvas dialogo;
+    [SerializeField]
+    private GameObject efectoTransicion;
     public Image cara;
-    public Sprite[] carasPersonajes = new Sprite[4];
+    [SerializeField]
+    private Sprite[] carasPersonajes = new Sprite[2];
 
     private int click = 51;
     private bool colisionInicio = false;
 
+    private void Awake()
+    {
+        efectoTransicion.GetComponent<Animator>().Play("TransicionEntrar");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "ComienzoNv2")

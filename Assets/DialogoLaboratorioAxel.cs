@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class DialogoLaboratorioAxel : MonoBehaviour
 {
@@ -11,7 +9,7 @@ public class DialogoLaboratorioAxel : MonoBehaviour
     [SerializeField]
     private Canvas canvasDialogo, canvasAviso;
     [SerializeField]
-    private SpriteRenderer jeringaRoja;
+    private SpriteRenderer MedicinaRojaHUD;
     [SerializeField]
     private Image cabeza;
     [SerializeField]
@@ -21,7 +19,7 @@ public class DialogoLaboratorioAxel : MonoBehaviour
 
     private void Update()
     {
-        if (jeringaRoja.isVisible)
+        if (MedicinaRojaHUD.isVisible)
         {
             Dialogo();
         }
@@ -54,6 +52,14 @@ public class DialogoLaboratorioAxel : MonoBehaviour
                 break;
             case 22:
                 DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
+                if (LenguajesOpciones.enIngles)
+                {
+                    canvasAviso.GetComponentInChildren<TMP_Text>().SetText("Use the medicine with F.");
+                }
+                else
+                {
+                    canvasAviso.GetComponentInChildren<TMP_Text>().SetText("Usa la medicina con F.");
+                }
                 click = 0;
                 break;
             case 23:

@@ -4659,7 +4659,7 @@ PrefabInstance:
     - target: {fileID: 2668326048030357624, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: jeringaRojaHUD
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1737074754}
     - target: {fileID: 3836210590330319613, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: normalJA
       value: 
@@ -4755,10 +4755,6 @@ PrefabInstance:
     - target: {fileID: 4419796028850294492, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419796028850294495, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
-      propertyPath: salto
-      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 4419796028850294495, guid: 76a65bf70a3d33e47994ab05b4125479, type: 3}
       propertyPath: normalJA

@@ -9,7 +9,7 @@ public class MenuPrincipal : MonoBehaviour
    //Notas n°0: Dia 253, ya estoy cansado de reprogramar, me quejare para que me paguen.
 
     //Variables publicas
-    public Button btn_nuevaPartida/*, continuarPartida*/, btn_opciones, btn_salir;
+    public Button btn_nuevaPartida, btn_continuarPartida, btn_opciones, btn_salir;
     public Canvas menuPrincipal;
 
     //Variables privadas
@@ -26,6 +26,7 @@ public class MenuPrincipal : MonoBehaviour
         btn_opciones.onClick.AddListener(BTN_OpcionesClick);
         btn_salir.onClick.AddListener(BTN_SalirClick);
         btn_nuevaPartida.onClick.AddListener(BTN_NuevaPartidaClick);
+        btn_continuarPartida.onClick.AddListener(BTN_ContinuarPartidaClick);
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -46,7 +47,12 @@ public class MenuPrincipal : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
+    public void BTN_ContinuarPartidaClick()
+    {
+        GuardarCargarDatos.instancia.Cargar();
+    }
+
     //Getters
     public bool GetEmpezar()
     {

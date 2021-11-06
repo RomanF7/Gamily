@@ -35,4 +35,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveles/Acto3/Acto3.unity
     guid: 8abc17491e181b3468bbd339e32a08ef
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Acto2/LabMedNv2.unity
+    guid: 57aea60f9311d084d9814d18bf2d9d7a
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Acto2/Nivel2.unity
+    guid: 2f63dd1e77ea6c7459ba07faecdf488c
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Acto3/End.unity
+    guid: e319be470635c8241a017181e6d26ac6
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 0ba7def35d6630d478073c9c832d616d
   m_configObjects: {}

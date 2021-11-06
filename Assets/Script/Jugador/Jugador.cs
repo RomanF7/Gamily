@@ -5,7 +5,7 @@ public class Jugador : MonoBehaviour
 {
 
     public static GameObject jugador;
-    public GameObject jugadorAPasar;
+    public GameObject jugadorAPasar, jabon, jefe;
     // Variables publicas
     public static float velocidad;
     public float salto;
@@ -22,6 +22,7 @@ public class Jugador : MonoBehaviour
 
 
 
+
     // Awake
     private void Awake()
     {
@@ -31,7 +32,9 @@ public class Jugador : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        GuardarCargarDatos.instancia.Guardar();
     }
+
 
     // Update
     private void Update()
@@ -39,6 +42,14 @@ public class Jugador : MonoBehaviour
         // Detectar Game Over
         if (gameOver)
             Reiniciar();
+
+        if (jabon.transform.position != jefe.transform.position)
+        {
+            if (jabon.GetComponent<SpriteRenderer>().isVisible)
+            {
+                jabon.transform.position = Vector2.MoveTowards(jabon.transform.position, jefe.transform.position, .5f);
+            }
+        }
 
         // Tomar ejes
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -100,13 +111,13 @@ public class Jugador : MonoBehaviour
             // Pausar
             if (Input.GetKeyDown(KeyCode.P))
             {
-                GuardarCargarDatos.intancia.Guardar();
+                GuardarCargarDatos.instancia.Guardar();
                 canvasMenuPausa.enabled = true;
             }
 
             if (Input.GetKeyDown(KeyCode.M))
             {
-                GuardarCargarDatos.intancia.Cargar();
+                GuardarCargarDatos.instancia.Cargar();
             }
         }
         else
@@ -134,7 +145,7 @@ public class Jugador : MonoBehaviour
     // (Se reinicia el nivel)
     private void Reiniciar()
     {
-        
+
         // parar música
         if (!canvasGameOver.isActiveAndEnabled && gameOver)
         {
@@ -142,12 +153,21 @@ public class Jugador : MonoBehaviour
             MenuPausa.enPausa = true;
             spriteRenderer.enabled = false;
             canvasGameOver.enabled = true;
-        }        
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             gameOver = false;
-            MenuPausa.enPausa = false;
             canvasGameOver.enabled = false;
+            MenuPausa.enPausa = false;
+            if (SceneManager.GetActiveScene().name == "Acto3")
+            {
+                DialogoNivel3.click = 76;
+                Jefe.stop = false;
+                Jefe.stop2 = false;
+                Jefe.ataque1 = false;
+                Jefe.ataque2 = false;
+                Jefe.ataque3 = false;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -201,5 +221,9 @@ public class Jugador : MonoBehaviour
             gameOver = true;
         }
     }
-
+    public void PARAR()
+    {
+        animator.SetBool("Jabon", false);
+        jabon.SetActive(true);
+    }
 }

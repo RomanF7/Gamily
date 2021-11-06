@@ -19,6 +19,11 @@ TagManager:
   - ComienzoNv2
   - FinalNv2
   - TransicionAlNv3
+  - DialogoCasaNv2
+  - InicioPeleaBoss
+  - Rayo
+  - Boss
+  - Jabon
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ public class DialogoLabNv2 : MonoBehaviour
     [SerializeField]
     private Canvas dialogo;
     [SerializeField]
-    private GameObject efectoDialogo;
+    private GameObject efectoTransicion;
     public Image cara;
     public Sprite caraAxel, caraDoctor;
 
@@ -19,13 +19,15 @@ public class DialogoLabNv2 : MonoBehaviour
     {
         if (click == 37)
         {
-            efectoDialogo.SetActive(true);
-            efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
             cara.sprite = caraDoctor;
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             dialogo.enabled = true;
             MenuPausa.enPausa = true;
         }
+    }
+    private void Awake()
+    {
+        efectoTransicion.GetComponent<Animator>().Play("TransicionEntrar");
     }
     void Update()
     {
@@ -53,11 +55,10 @@ public class DialogoLabNv2 : MonoBehaviour
             case 47:
                 MenuPausa.enPausa = false;
                 dialogo.enabled = false;
-                efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
-                UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("LabMedNv2");
+                efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
                 break;
         }
         if (click >= 48)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LabMedNv2");
+            efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
     }
 }

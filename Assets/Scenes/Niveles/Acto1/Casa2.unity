@@ -743,7 +743,11 @@ PrefabInstance:
       objectReference: {fileID: 1203050753}
     - target: {fileID: 2394107748267016993, guid: 83d5eb1107b29314bb0b58788fc1cb51, type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394107748267016993, guid: 83d5eb1107b29314bb0b58788fc1cb51, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6452950226816478810, guid: 83d5eb1107b29314bb0b58788fc1cb51, type: 3}
       propertyPath: m_RootOrder
@@ -1512,6 +1516,7 @@ GameObject:
   - component: {fileID: 1015269592}
   - component: {fileID: 1015269594}
   - component: {fileID: 1015269593}
+  - component: {fileID: 1015269595}
   m_Layer: 5
   m_Name: Texto
   m_TagString: Untagged
@@ -1635,6 +1640,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015269591}
   m_CullTransparentMesh: 1
+--- !u!114 &1015269595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015269591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212612eb9a00acf44af4a359c057301a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1073820722
 GameObject:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ public class DialogoNivel1 : MonoBehaviour
                     recordatorioPlata = false;
                 break;
             case 10 when mostrarFolleto == true:
-                if (Doctor.visitaAlDoctor == true)
+                if (!LenguajesOpciones.enIngles)
                 {
                     folletoImg.sprite = folletoESP;
                 }

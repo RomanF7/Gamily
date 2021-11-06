@@ -9,18 +9,20 @@ public class DialogoCasaNv2 : MonoBehaviour
     [SerializeField]
     private Canvas dialogo;
     [SerializeField]
-    private GameObject efectoDialogo;
+    private GameObject efectoTransicion;
     public Image cara;
     public Sprite caraAxel;
 
     private int click = 35;
 
+    private void Awake()
+    {
+        efectoTransicion.GetComponent<Animator>().Play("TransicionEntrar");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DialogoCasaNv2" && click == 35)
         {
-            efectoDialogo.SetActive(true);
-            efectoDialogo.GetComponent<Animator>().Play("EntrandoBarras");
             cara.sprite = caraAxel;
             DialogoPorDefecto.instancia.Traducir(click + "", textoDialogo);
             dialogo.enabled = true;
@@ -41,8 +43,7 @@ public class DialogoCasaNv2 : MonoBehaviour
         {
             MenuPausa.enPausa = false;
             dialogo.enabled = false;
-            efectoDialogo.GetComponent<Animator>().Play("SalirBarras");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LabNv2");
+            efectoTransicion.GetComponent<Animator>().Play("TransicionSalir");
         }
     }
 }

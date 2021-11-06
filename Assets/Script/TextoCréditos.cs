@@ -2,9 +2,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-
-
-
 public class TextoCréditos : MonoBehaviour
 {
 
@@ -20,18 +17,19 @@ public class TextoCréditos : MonoBehaviour
         {
             creditos[0] = "- Time is Money -\nDeveloped by Gamily";
             creditos[1] = "Coordinator, Programming:\nRomán Ferreira";
-            creditos[2] = "Subcoordinator, Supervisior:\nMatías Barretto";
-            creditos[3] = "Art, Sound, Story:\nIgnacio Rivero";
+            creditos[2] = "Subcoordinator, Supervisor, Programming:\nMatías Barretto";
+            creditos[3] = "Art, Sound, Story, Programming:\nIgnacio Rivero";
             creditos[4] = "Analysis and Design:\nFacundo Cor";
-            creditos[5] = "Digital Business Administration:\nGonzalo Ferrando";
-        } else
+            creditos[5] = "Business, World Design:\nGonzalo Ferrando";
+        }
+        else
         {
-            creditos[0] = "- Time is Money -\nDesarrollado por Gamily";
+            creditos[0] = "- El Tiempo es Oro -\nDesarrollado por Gamily";
             creditos[1] = "Coordinador, Programación:\nRomán Ferreira";
-            creditos[2] = "Subcoordinador, Supervisión:\nMatías Barretto";
-            creditos[3] = "Arte, Sonido, Historia:\nIgnacio Rivero";
+            creditos[2] = "Subcoordinador, Supervisión, Programación:\nMatías Barretto";
+            creditos[3] = "Arte, Sonido, Historia, Programación:\nIgnacio Rivero";
             creditos[4] = "Análisis y Diseño:\nFacundo Cor";
-            creditos[5] = "Administración de Negocios Digitales:\nGonzalo Ferrando";
+            creditos[5] = "Negocios Digitales, Diseño de Mundo:\nGonzalo Ferrando";
         }
         TextoTMP.text = creditos[0];
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TomarJeringaRoja : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer jeringaRoja;
+    private SpriteRenderer medicinaRoja;
     [HideInInspector]
     public static bool tenerJR = false;
 
@@ -14,7 +14,7 @@ public class TomarJeringaRoja : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            jeringaRoja.enabled = true;
+            medicinaRoja.enabled = true;
             tenerJR = true;
             Destroy(gameObject);
         }

@@ -7331,6 +7331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoDialogo: {fileID: 165566559}
   dialogo: {fileID: 1938158960}
+  efectoTransicion: {fileID: 1216765231}
   cara: {fileID: 527958933}
   carasPersonajes:
   - {fileID: 21300000, guid: 01cf497da8d0f4c48ac872ebe4414440, type: 3}

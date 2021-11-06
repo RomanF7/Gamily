@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\Entorno\Laboratorio\EntrarLab.cs" />
     <Compile Include="Assets\Script\Jugador\DialogoNivel1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\Script\TransicionAlNivel3.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Script\Dialogos\DialogoLabMed.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -133,7 +134,12 @@
     <Compile Include="Assets\Script\NPC\Policia\DialogoNive1Noche.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\TextoCréditos.cs" />
-    <Compile Include="Assets\Script\TransicionAlNivel3.cs" />
+    <Compile Include="Assets\Script\Dialogos\Acto3\DialogoNivel3.cs" />
+    <Compile Include="Assets\Script\JabonActo3.cs" />
+    <Compile Include="Assets\Script\Dialogos\DialogoFinal.cs" />
+    <Compile Include="Assets\Script\TextoFinal.cs" />
+    <Compile Include="Assets\Script\TraducirTransicion.cs" />
+    <Compile Include="Assets\LimpiarDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -823,6 +829,15 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+      <HintPath>Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+      <HintPath>Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
